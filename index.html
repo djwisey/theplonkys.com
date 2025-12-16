@@ -9,7 +9,7 @@
   <meta property="og:description" content="Shetland's party-starting cover band. See gigs, listen, and book The Plonkys." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://theplonkys.example.com" />
-  <meta property="og:image" content="https://picsum.photos/1200/630?band" />
+  <meta property="og:image" content="assets/images/live-band.png" />
   <link rel="stylesheet" href="styles.css" />
   <script type="application/ld+json">
   {
@@ -44,6 +44,7 @@
       <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">☰</button>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#socials">Social</a></li>
         <li><a href="#gigs">Live</a></li>
         <li><a href="#media">Media</a></li>
         <li><a href="#listen">Listen</a></li>
@@ -54,19 +55,48 @@
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__content">
-        <p class="eyebrow">Shetland Islands, Scotland</p>
-        <h1 id="hero-title">The Plonkys</h1>
-        <p class="tagline">Shetland's party-starting cover band</p>
-        <div class="cta-group">
-          <a class="btn primary" href="#gigs">See Gigs</a>
-          <a class="btn ghost" href="#contact">Contact</a>
+      <div class="hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow">Shetland Islands, Scotland</p>
+          <h1 id="hero-title">Follow The Plonkys</h1>
+          <p class="tagline">
+            Rap-to-rock cover sets, party anthems, and original tunes. Facebook and Instagram are where gig drops, photos, and
+            reels land first.
+          </p>
+          <div class="cta-group">
+            <a class="btn primary" href="#gigs">See Gigs</a>
+            <a class="btn ghost" href="#contact">Contact</a>
+          </div>
+          <div class="hero__meta">
+            <span class="chip">Rap</span>
+            <span class="chip">Rock</span>
+            <span class="chip">Pop</span>
+            <span class="chip">Party Anthems</span>
+          </div>
+          <div class="hero__social">
+            <a class="pill" href="https://facebook.com/theplonkys" target="_blank" rel="noreferrer">Facebook</a>
+            <a class="pill" href="https://instagram.com/theplonkys" target="_blank" rel="noreferrer">Instagram</a>
+          </div>
         </div>
-        <div class="hero__meta">
-          <span class="chip">Rap</span>
-          <span class="chip">Rock</span>
-          <span class="chip">Pop</span>
-          <span class="chip">Party Anthems</span>
+        <div class="hero__visual reveal">
+          <div class="hero__badge">
+            <img src="assets/images/logo-bottle.png" alt="The Plonkys guitar bottle logo" loading="lazy" />
+            <div>
+              <p class="eyebrow">Always live</p>
+              <strong>New photos, posters, and release news drop on socials.</strong>
+            </div>
+          </div>
+          <figure class="hero__shot">
+            <img src="assets/images/live-band.png" alt="The Plonkys raising bottles together on stage" loading="lazy" />
+            <figcaption>Live in Shetland — watch Facebook for the next announcement.</figcaption>
+          </figure>
+          <div class="hero__overlay-card">
+            <img src="assets/images/is-it-going-your-way.png" alt="Is It Going Your Way? cover art" loading="lazy" />
+            <div>
+              <p class="eyebrow">Release highlight</p>
+              <p>“Is It Going Your Way?” — share it straight from Instagram stories.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -106,6 +136,51 @@
       </div>
     </section>
 
+    <section class="section socials" id="socials" aria-labelledby="socials-title">
+      <div class="section__header">
+        <h2 id="socials-title">Social spotlight</h2>
+        <p class="section__eyebrow">Facebook • Instagram • Poster drops</p>
+      </div>
+      <div class="social-grid">
+        <article class="social-card reveal">
+          <div class="social-card__media">
+            <img src="assets/images/frontman-kneeling.png" alt="Frontman kneeling with a microphone mid-song" loading="lazy" />
+          </div>
+          <div class="social-card__body">
+            <p class="eyebrow">Facebook</p>
+            <h3>Gig drops and live photos</h3>
+            <p>Set reminders, RSVP to shows, and grab tickets from the feed.</p>
+            <a class="btn social" href="https://facebook.com/theplonkys" target="_blank" rel="noreferrer">facebook.com/theplonkys</a>
+          </div>
+        </article>
+        <article class="social-card reveal">
+          <div class="social-card__media">
+            <img src="assets/images/drummer-smile.png" alt="Drummer smiling behind a colorful kit" loading="lazy" />
+          </div>
+          <div class="social-card__body">
+            <p class="eyebrow">Instagram</p>
+            <h3>Reels and behind the scenes</h3>
+            <p>Swipe through stage moments, backstage snapshots, and quick clips.</p>
+            <a class="btn social" href="https://instagram.com/theplonkys" target="_blank" rel="noreferrer">instagram.com/theplonkys</a>
+          </div>
+        </article>
+        <article class="social-card reveal">
+          <div class="social-card__media">
+            <img src="assets/images/mareel-poster.png" alt="Holiday Mareel Auditorium poster for The Plonkys" loading="lazy" />
+          </div>
+          <div class="social-card__body">
+            <p class="eyebrow">Posters &amp; promo</p>
+            <h3>Shareables for your story</h3>
+            <p>Grab our latest posters and artwork to spread the word fast.</p>
+            <div class="promo-badges">
+              <span class="chip">Stories ready</span>
+              <span class="chip">Hi-res</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="section live" id="gigs" aria-labelledby="live-title">
       <div class="section__header">
         <h2 id="live-title">Live / Gigs</h2>
@@ -126,19 +201,25 @@
         <p class="section__eyebrow">Gallery &amp; Press</p>
       </div>
       <div class="gallery" aria-label="Photo gallery">
-        <!-- Replace these placeholder images with official band photos -->
-        <figure class="gallery__item reveal"><img src="https://picsum.photos/600/400?random=11" loading="lazy" alt="The Plonkys performing on stage" /><figcaption>Live energy</figcaption></figure>
-        <figure class="gallery__item reveal"><img src="https://picsum.photos/600/400?random=12" loading="lazy" alt="Crowd enjoying The Plonkys" /><figcaption>Party crowds</figcaption></figure>
-        <figure class="gallery__item reveal"><img src="https://picsum.photos/600/400?random=13" loading="lazy" alt="Guitarist spotlight" /><figcaption>Guitar spotlight</figcaption></figure>
-        <figure class="gallery__item reveal"><img src="https://picsum.photos/600/400?random=14" loading="lazy" alt="Band lighting setup" /><figcaption>Bold lighting</figcaption></figure>
-        <figure class="gallery__item reveal"><img src="https://picsum.photos/600/400?random=15" loading="lazy" alt="Drummer in motion" /><figcaption>Rhythm drive</figcaption></figure>
-        <figure class="gallery__item reveal"><img src="https://picsum.photos/600/400?random=16" loading="lazy" alt="Band portrait" /><figcaption>Bandmates</figcaption></figure>
+        <figure class="gallery__item reveal"><img src="assets/images/live-band.png" loading="lazy" alt="The Plonkys raising bottles together on stage" /><figcaption>Live energy</figcaption></figure>
+        <figure class="gallery__item reveal"><img src="assets/images/frontman-kneeling.png" loading="lazy" alt="Singer kneeling with a microphone in hand" /><figcaption>Mic drop moments</figcaption></figure>
+        <figure class="gallery__item reveal"><img src="assets/images/drummer-smile.png" loading="lazy" alt="Smiling drummer playing under colorful lights" /><figcaption>Rhythm drive</figcaption></figure>
+        <figure class="gallery__item reveal"><img src="assets/images/acoustic-vocals.png" loading="lazy" alt="Guitarist singing with an acoustic guitar" /><figcaption>Acoustic break</figcaption></figure>
+        <figure class="gallery__item reveal"><img src="assets/images/mareel-poster.png" loading="lazy" alt="The Plonkys Mareel Auditorium holiday poster" /><figcaption>Mareel poster</figcaption></figure>
+        <figure class="gallery__item reveal"><img src="assets/images/is-it-going-your-way.png" loading="lazy" alt="Is It Going Your Way? cover art" /><figcaption>Cover art</figcaption></figure>
       </div>
       <div class="press-card reveal">
         <h3>Press</h3>
         <p>
           The Plonkys headlined Mareel in Lerwick with a rapid sell-out, underscoring their hometown draw. Their first original, “Reading Between The Lines,” hints at more homegrown tunes to come.
         </p>
+        <div class="press-card__art">
+          <img src="assets/images/logo-bottle.png" alt="The Plonkys bottle and guitar logo" loading="lazy" />
+          <div>
+            <p class="eyebrow">Follow the pages</p>
+            <p>Keep Facebook and Instagram in the loop for tour posters, merch drops, and release art like “Is It Going Your Way?”.</p>
+          </div>
+        </div>
       </div>
     </section>
 
