@@ -2,6 +2,10 @@
 
 A modern, responsive site for The Plonkys (Shetland folk/indie). Built with Next.js (App Router), TypeScript, Tailwind CSS, and MDX content.
 
+## Static HTML version
+- A JavaScript/HTML/CSS-only snapshot of the site lives in `public/static-site/index.html`.
+- Open that file directly in a browser (or serve `/public`) to explore a framework-free version that renders content from `public/static-site/data.js`.
+
 ## Setup
 1. Install dependencies:
    ```bash

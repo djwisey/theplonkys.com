@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Plonkys | Static HTML</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container flex space-between center" style="padding: 1rem 0">
+        <div class="brand">The Plonkys</div>
+        <nav class="nav-desktop" aria-label="Primary">
+          <a href="#home" class="active">Home</a>
+          <a href="#gigs">Gigs</a>
+          <a href="#music">Music</a>
+          <a href="#news">News</a>
+          <a href="#media">Media</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="burger" aria-hidden="true"></span>
+          <span>Menu</span>
+        </button>
+      </div>
+      <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true">
+        <div class="mobile-panel" aria-label="Mobile navigation">
+          <div class="flex space-between center">
+            <p class="brand">Menu</p>
+            <button id="close-menu" class="menu-toggle" aria-label="Close menu">
+              <span class="burger" aria-hidden="true"></span>
+            </button>
+          </div>
+          <a href="#home">Home</a>
+          <a href="#gigs">Gigs</a>
+          <a href="#music">Music</a>
+          <a href="#news">News</a>
+          <a href="#media">Media</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="home" class="hero">
+        <div class="container grid-two">
+          <div>
+            <p class="eyebrow">Shetland folk / indie</p>
+            <h1 id="band-name">The Plonkys</h1>
+            <p class="lead" id="tagline"></p>
+            <div class="button-row">
+              <a class="btn btn-primary" href="#gigs">See upcoming gigs</a>
+              <a class="btn btn-secondary" href="#music">Listen</a>
+            </div>
+            <p class="gig-meta" id="band-bio"></p>
+            <div class="social-row" id="social-links" aria-label="Social links"></div>
+          </div>
+          <div class="card">
+            <p class="eyebrow" style="letter-spacing: 0.2em">Featured media</p>
+            <div class="stack">
+              <div class="embed">
+                <p class="news-date">Spotify</p>
+                <div class="frame"></div>
+                <a class="badge-link" href="#music">Open playlist →</a>
+              </div>
+              <div class="embed">
+                <p class="news-date">YouTube</p>
+                <div class="frame"></div>
+                <a class="badge-link" href="#media">Watch video →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gigs" class="section">
+        <div class="container grid-two" style="align-items: start">
+          <div>
+            <p class="eyebrow">Stay in the loop</p>
+            <h2>Upcoming gigs</h2>
+            <p class="subtitle">Shows shaped by tides, ferries, and sea air.</p>
+            <div id="gig-list" class="stack"></div>
+          </div>
+          <div>
+            <p class="eyebrow">News</p>
+            <h2>Latest updates</h2>
+            <p class="subtitle">Releases, announcements, and travel notes.</p>
+            <div id="news-list" class="stack"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="music" class="section">
+        <div class="container grid-two" style="align-items: start">
+          <div>
+            <p class="eyebrow">Listen</p>
+            <h2>Music</h2>
+            <p class="subtitle">Stream the newest singles or revisit the live takes.</p>
+            <div id="embed-grid" class="stack"></div>
+          </div>
+          <div>
+            <p class="eyebrow">Releases</p>
+            <h2>Records</h2>
+            <p class="subtitle">A mix of sea-soaked studio tracks and live cuts.</p>
+            <div id="release-grid" class="release-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="media" class="section">
+        <div class="container grid-two" style="align-items: start">
+          <div>
+            <p class="eyebrow">The band</p>
+            <h2>Who we are</h2>
+            <p class="subtitle">Musicians leaning into island stories and cinematic folk.</p>
+            <div id="member-grid" class="member-grid"></div>
+          </div>
+          <div class="cta">
+            <h3 style="margin-top: 0; font-size: 1.5rem">Book The Plonkys</h3>
+            <p class="gig-meta">
+              Ready for a harbour-side session, a festival stage, or an intimate listening room?
+            </p>
+            <div class="button-row">
+              <a class="btn btn-primary" href="#contact">Contact for booking</a>
+              <a class="btn btn-secondary" href="#about">See the EPK</a>
+            </div>
+            <div class="quote-list" id="quote-highlight"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container grid-two" style="align-items: start">
+          <div>
+            <p class="eyebrow">Press kit</p>
+            <h2>Electronic press kit</h2>
+            <p class="subtitle">Downloads ready for promoters and journalists.</p>
+            <div class="stack">
+              <a class="badge-link" href="/downloads/press-photos.zip">Press photos</a>
+              <a class="badge-link" href="/downloads/the-plonkys-tech-rider.pdf">Tech rider</a>
+              <a class="badge-link" href="/downloads/the-plonkys-logo-pack.zip">Logo pack</a>
+            </div>
+          </div>
+          <div>
+            <p class="eyebrow">Press</p>
+            <h2>What people say</h2>
+            <div id="quote-list" class="quote-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <p class="eyebrow">Contact</p>
+          <h2>Reach the band</h2>
+          <p class="subtitle">Booking, press, or just to say hello.</p>
+          <div id="contact-cards" class="contact-cards"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container flex space-between center" style="gap: 1rem; flex-wrap: wrap">
+        <div>
+          <p class="brand" style="margin: 0">The Plonkys</p>
+          <small>Modern folk/indie from Shetland.</small>
+        </div>
+        <div class="social-row" id="footer-socials"></div>
+      </div>
+    </footer>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
