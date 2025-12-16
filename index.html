@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Plonkys | Shetland Islands Party Band</title>
+  <meta name="description" content="The Plonkys are a high-energy cover band from the Shetland Islands, Scotland. Catch their gigs, listen in, and get in touch for bookings." />
+  <meta property="og:title" content="The Plonkys" />
+  <meta property="og:description" content="Shetland's party-starting cover band. See gigs, listen, and book The Plonkys." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://theplonkys.example.com" />
+  <meta property="og:image" content="https://picsum.photos/1200/630?band" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "The Plonkys",
+    "description": "High-energy, eclectic live band from the Shetland Islands covering rap through classic rock and party anthems.",
+    "url": "https://theplonkys.example.com",
+    "sameAs": [
+      "https://facebook.com/theplonkys",
+      "https://instagram.com/theplonkys"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Shetland Islands",
+      "addressCountry": "Scotland"
+    },
+    "member": [
+      {"@type": "Person", "name": "Arron Peart", "jobTitle": "Drums"},
+      {"@type": "Person", "name": "David Sandison", "jobTitle": "Guitar/Vocals"},
+      {"@type": "Person", "name": "Taylor Pirie", "jobTitle": "Guitar"},
+      {"@type": "Person", "name": "Steven Anderson", "jobTitle": "Bass"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary">
+      <a class="logo" href="#top">The Plonkys</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#gigs">Live</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#listen">Listen</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <p class="eyebrow">Shetland Islands, Scotland</p>
+        <h1 id="hero-title">The Plonkys</h1>
+        <p class="tagline">Shetland's party-starting cover band</p>
+        <div class="cta-group">
+          <a class="btn primary" href="#gigs">See Gigs</a>
+          <a class="btn ghost" href="#contact">Contact</a>
+        </div>
+        <div class="hero__meta">
+          <span class="chip">Rap</span>
+          <span class="chip">Rock</span>
+          <span class="chip">Pop</span>
+          <span class="chip">Party Anthems</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="section__header">
+        <h2 id="about-title">About</h2>
+        <p class="section__eyebrow">Shetland Folk Festival</p>
+      </div>
+      <div class="about__grid">
+        <div class="about__bio reveal">
+          <p>
+            The Plonkys are a high-energy, eclectic live band from the Shetland Islands, Scotland, known for jumping between rap, classic rock, and party anthems in the same set. Their shows are fast-paced, full of surprises, and built to keep dancefloors packed.
+          </p>
+          <p>
+            Fresh from a sold-out headline at Mareel in Lerwick, they keep momentum with a growing slate of originals, starting with their first release “Reading Between The Lines.”
+          </p>
+        </div>
+        <div class="about__panel reveal">
+          <h3>Bandmates</h3>
+          <ul class="bandmates">
+            <li><strong>Arron Peart</strong> — drums</li>
+            <li><strong>David Sandison</strong> — guitar &amp; vocals</li>
+            <li><strong>Taylor Pirie</strong> — guitar</li>
+            <li><strong>Steven Anderson</strong> — bass</li>
+          </ul>
+          <div class="chips" aria-label="Sounds like">
+            <span class="chip">Rap</span>
+            <span class="chip">Rock</span>
+            <span class="chip">Pop</span>
+            <span class="chip">Party Anthems</span>
+          </div>
+          <div class="highlight">
+            Sold-out headline show at Mareel (Lerwick) — tickets vanished fast for this major gig.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section live" id="gigs" aria-labelledby="live-title">
+      <div class="section__header">
+        <h2 id="live-title">Live / Gigs</h2>
+        <p class="section__eyebrow">Next shows</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter gigs">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+        <button class="filter-btn" data-filter="past">Past</button>
+      </div>
+      <div id="gigs-list" class="gigs-list" aria-live="polite"></div>
+      <p class="update-note">Edit gigs in <code>script.js</code> under the <em>gigs</em> array.</p>
+    </section>
+
+    <section class="section media" id="media" aria-labelledby="media-title">
+      <div class="section__header">
+        <h2 id="media-title">Media</h2>
+        <p class="section__eyebrow">Gallery &amp; Press</p>
+      </div>
+      <div class="gallery" aria-label="Photo gallery">
+        <!-- Replace these placeholder images with official band photos -->
+        <figure class="gallery__item reveal"><img src="https://picsum.photos/600/400?random=11" loading="lazy" alt="The Plonkys performing on stage" /><figcaption>Live energy</figcaption></figure>
+        <figure class="gallery__item reveal"><img src="https://picsum.photos/600/400?random=12" loading="lazy" alt="Crowd enjoying The Plonkys" /><figcaption>Party crowds</figcaption></figure>
+        <figure class="gallery__item reveal"><img src="https://picsum.photos/600/400?random=13" loading="lazy" alt="Guitarist spotlight" /><figcaption>Guitar spotlight</figcaption></figure>
+        <figure class="gallery__item reveal"><img src="https://picsum.photos/600/400?random=14" loading="lazy" alt="Band lighting setup" /><figcaption>Bold lighting</figcaption></figure>
+        <figure class="gallery__item reveal"><img src="https://picsum.photos/600/400?random=15" loading="lazy" alt="Drummer in motion" /><figcaption>Rhythm drive</figcaption></figure>
+        <figure class="gallery__item reveal"><img src="https://picsum.photos/600/400?random=16" loading="lazy" alt="Band portrait" /><figcaption>Bandmates</figcaption></figure>
+      </div>
+      <div class="press-card reveal">
+        <h3>Press</h3>
+        <p>
+          The Plonkys headlined Mareel in Lerwick with a rapid sell-out, underscoring their hometown draw. Their first original, “Reading Between The Lines,” hints at more homegrown tunes to come.
+        </p>
+      </div>
+    </section>
+
+    <section class="section listen" id="listen" aria-labelledby="listen-title">
+      <div class="section__header">
+        <h2 id="listen-title">Listen</h2>
+        <p class="section__eyebrow">Replace with official audio</p>
+      </div>
+      <div class="audio-grid reveal">
+        <div class="audio-card">
+          <h3>Reading Between The Lines</h3>
+          <audio controls preload="none">
+            <source src="audio/reading-between-the-lines.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <p class="note">Replace with official audio.</p>
+        </div>
+        <div class="audio-card">
+          <h3>Live Sampler</h3>
+          <audio controls preload="none">
+            <source src="audio/live-sampler.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <p class="note">Drop in your favorite live clip.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="section__header">
+        <h2 id="contact-title">Contact</h2>
+        <p class="section__eyebrow">Booking enquiries</p>
+      </div>
+      <div class="contact__grid">
+        <form class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <button class="btn primary" type="submit">Send</button>
+          <p class="form-success" role="status" aria-live="polite"></p>
+        </form>
+        <div class="contact__info">
+          <h3>Booking enquiries</h3>
+          <p>Email us directly or use the form.</p>
+          <div class="booking-email">
+            <a href="mailto:booking@theplonkys.com">booking@theplonkys.com</a>
+            <button class="btn ghost" type="button" id="copy-email">Copy email</button>
+          </div>
+          <!-- Update social links below -->
+          <div class="social-buttons" aria-label="Social links">
+            <a class="btn social" href="https://facebook.com/theplonkys" target="_blank" rel="noreferrer">Facebook</a>
+            <a class="btn social" href="https://instagram.com/theplonkys" target="_blank" rel="noreferrer">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__social">
+      <a href="https://facebook.com/theplonkys" aria-label="Facebook">&#x1F4F7;</a>
+      <a href="https://instagram.com/theplonkys" aria-label="Instagram">&#x1F4F8;</a>
+    </div>
+    <p class="footer__meta">© The Plonkys • Built in vanilla HTML/CSS/JS</p>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
