@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&display=swap');
+
 :root {
   --bg: #0b0c10;
   --surface: #11131a;
@@ -32,10 +34,10 @@ html {
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  background: radial-gradient(circle at 20% 20%, rgba(255, 59, 111, 0.12), transparent 35%),
-    radial-gradient(circle at 80% 0%, rgba(56, 217, 169, 0.1), transparent 30%),
-    var(--bg);
+  font-family: 'Space Grotesk', system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at 15% 10%, rgba(255, 59, 111, 0.12), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(56, 217, 169, 0.1), transparent 32%),
+    linear-gradient(145deg, #05060a 0%, #0c1018 40%, #0b0c10 100%);
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
@@ -55,8 +57,9 @@ img {
   position: sticky;
   top: 0;
   z-index: 10;
-  backdrop-filter: blur(10px);
-  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(16px);
+  background: linear-gradient(90deg, rgba(255, 59, 111, 0.08), rgba(56, 217, 169, 0.08)),
+    color-mix(in srgb, var(--bg) 85%, transparent);
   border-bottom: 1px solid var(--border);
 }
 
@@ -69,10 +72,40 @@ img {
 }
 
 .logo {
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--surface) 75%, var(--bg));
+  border: 1px solid var(--border);
   text-decoration: none;
+  box-shadow: var(--shadow);
+}
+
+.logo__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.logo__wordmark {
+  display: grid;
+  gap: 0.1rem;
+  line-height: 1.2;
+}
+
+.logo__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.logo strong {
+  font-size: 1.05rem;
 }
 
 .nav-links {
@@ -130,7 +163,10 @@ img {
   padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 3vw, 3rem) 4rem;
   display: flex;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(255, 59, 111, 0.18), rgba(56, 217, 169, 0.18));
+  background: linear-gradient(135deg, rgba(255, 59, 111, 0.14), rgba(56, 217, 169, 0.14)),
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.05), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.06), transparent 40%),
+    color-mix(in srgb, var(--surface) 80%, transparent);
   border-bottom: 1px solid var(--border);
 }
 
@@ -147,6 +183,11 @@ img {
   text-align: left;
   display: grid;
   gap: 1rem;
+  padding: 1.25rem;
+  background: color-mix(in srgb, var(--surface) 70%, var(--bg));
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
 }
 
 .eyebrow {
@@ -304,6 +345,41 @@ h1 {
 
 .hero__meta {
   justify-content: flex-start;
+}
+
+.hero__marquee {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 80%, var(--bg));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.hero__marquee-track {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  animation: marquee 18s linear infinite;
+  min-width: max-content;
+}
+
+.marquee-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 28%, var(--surface)), var(--surface));
+  border: 1px solid var(--border);
+  font-weight: 700;
+}
+
+.marquee-chip img {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--surface) 80%, var(--bg));
 }
 
 .chip {
@@ -570,20 +646,35 @@ h1 {
 .footer {
   padding: 1.5rem clamp(1.5rem, 3vw, 3rem);
   border-top: 1px solid var(--border);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   align-items: center;
-  flex-wrap: wrap;
   gap: 1rem;
 }
 
-.footer__social a {
-  text-decoration: none;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 0.5rem;
-  border-radius: 10px;
+.footer__brand {
   display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer__logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.footer__tagline {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+}
+
+.footer__social {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .footer__meta {
@@ -619,6 +710,15 @@ h1 {
 .reveal.visible {
   opacity: 1;
   transform: none;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 768px) {
