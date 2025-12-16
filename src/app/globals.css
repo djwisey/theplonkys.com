@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  background-color: #0b1b2b;
+}
+
+body {
+  @apply bg-ocean text-slate-100 min-h-screen antialiased;
+  background-image: var(--grain-layer);
+}
+
+:root {
+  --grain-layer: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.04) 1px, transparent 0);
+}
+
+a {
+  @apply transition-colors duration-200 ease-out;
+}
+
+.gradient-sheen {
+  background: radial-gradient(ellipse at top left, rgba(58, 166, 161, 0.2), transparent 40%),
+    radial-gradient(ellipse at bottom right, rgba(247, 178, 103, 0.2), transparent 35%);
+}
+
+.prose-invert h1,
+.prose-invert h2,
+.prose-invert h3,
+.prose-invert h4,
+.prose-invert h5,
+.prose-invert strong {
+  @apply text-white;
+}
+
+.prose-invert p,
+.prose-invert li {
+  @apply text-slate-200;
+}
+
+.prose-invert a {
+  @apply text-seaglass hover:text-amber;
+}

@@ -1,0 +1,45 @@
+{
+  "bio": "The Plonkys blend fiddle-led melodies with atmospheric guitars, writing songs shaped by Shetland tides and long solstice nights.",
+  "socials": [
+    { "label": "Instagram", "url": "https://instagram.com", "icon": "📸" },
+    { "label": "Spotify", "url": "https://open.spotify.com", "icon": "🎧" },
+    { "label": "YouTube", "url": "https://youtube.com", "icon": "▶️" }
+  ],
+  "members": [
+    { "name": "Isla Thomsen", "role": "Vocals / Guitar", "bio": "Songwriter drawing on island stories and vivid imagery." },
+    { "name": "Calum Reid", "role": "Fiddle", "bio": "Fiddle textures that sit between trad roots and cinematic swells." },
+    { "name": "Mara Gunn", "role": "Bass / Synth", "bio": "Anchors the low end with warm synth beds and melodic bass." },
+    { "name": "Euan Kerr", "role": "Percussion", "bio": "Subtle grooves with brushes, mallets, and coastal field textures." }
+  ],
+  "pressContacts": [
+    { "label": "Booking", "value": "booking@theplonkys.com", "type": "email" },
+    { "label": "Press", "value": "press@theplonkys.com", "type": "email" }
+  ],
+  "embeds": {
+    "spotify": "https://open.spotify.com/artist/placeholder",
+    "youtube": "https://youtube.com/playlist?list=placeholder",
+    "appleMusic": "https://music.apple.com/artist/placeholder"
+  },
+  "gallery": [
+    { "src": "https://images.unsplash.com/photo-1464375117522-1311d6a5b81f?auto=format&fit=crop&w=1200&q=80", "alt": "Stage lights over misty crowd" },
+    { "src": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80", "alt": "Hands on a guitar" },
+    { "src": "https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?auto=format&fit=crop&w=1200&q=80", "alt": "Fiddle closeup" },
+    { "src": "https://images.unsplash.com/photo-1484573026400-351044c1c1c7?auto=format&fit=crop&w=1200&q=80", "alt": "Band backstage" },
+    { "src": "https://images.unsplash.com/photo-1520528932215-1c0eddf391a3?auto=format&fit=crop&w=1200&q=80", "alt": "Audience silhouette" },
+    { "src": "https://images.unsplash.com/photo-1507878866276-a947ef722fee?auto=format&fit=crop&w=1200&q=80", "alt": "Drum kit under lights" }
+  ],
+  "videos": [
+    { "title": "Harbour Lights (Live)", "url": "https://youtube.com/watch?v=placeholder1" },
+    { "title": "Salt & Strings", "url": "https://youtube.com/watch?v=placeholder2" }
+  ],
+  "quotes": [
+    { "quote": "Full of salt air and late-night warmth.", "source": "Northern Notes" },
+    { "quote": "A cinematic sweep without losing the trad heart.", "source": "Coastal Sound" },
+    { "quote": "Songs that feel like bonfire embers in the wind.", "source": "Island Weekly" }
+  ],
+  "epk": {
+    "pressPhotos": "/downloads/press-photos.zip",
+    "techRider": "/downloads/the-plonkys-tech-rider.pdf",
+    "logo": "/downloads/the-plonkys-logo-pack.zip"
+  }
+}
