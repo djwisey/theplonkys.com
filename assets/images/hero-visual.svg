@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="spot" cx="0.6" cy="0.35" r="0.6">
+      <stop stop-color="#d946ef" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#0ea5e9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <circle cx="1200" cy="300" r="450" fill="url(#spot)"/>
+  <circle cx="400" cy="520" r="360" fill="#0ea5e9" fill-opacity="0.08"/>
+  <g fill="#e5e7eb" fill-opacity="0.8">
+    <path d="M360 640c80-20 140-100 180-200 30 120 90 190 180 210s170-40 210-80l120 150-160 80H420L280 660l80-20z" opacity="0.22"/>
+    <path d="M520 620c72-18 126-92 162-183 27 110 82 174 165 193 83 20 156-36 193-72l102 128-138 69H558L432 640l88-20z" opacity="0.35"/>
+  </g>
+  <text x="110" y="180" fill="#e5e7eb" font-family="'Space Grotesk', 'Inter', system-ui" font-size="64" font-weight="700">The Plonkys</text>
+  <text x="110" y="240" fill="#cbd5f5" font-family="'Space Grotesk', 'Inter', system-ui" font-size="32">Midnight energy, arena-ready hooks.</text>
+</svg>

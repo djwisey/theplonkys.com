@@ -3,323 +3,295 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Plonkys | Shetland Islands Party Band</title>
-  <meta name="description" content="The Plonkys are a high-energy cover band from the Shetland Islands, Scotland. Catch their gigs, listen in, and get in touch for bookings." />
+  <title>The Plonkys | Official Site</title>
+  <meta name="description" content="The Plonkys fuse rap, rock, and arena-sized hooks from the Shetland Islands. Stream the latest release, grab tickets, and shop tour merch." />
   <meta property="og:title" content="The Plonkys" />
-  <meta property="og:description" content="Shetland's party-starting cover band. See gigs, listen, and book The Plonkys." />
+  <meta property="og:description" content="Midnight energy, neon visuals, and a tour built for movement." />
+  <meta property="og:image" content="assets/images/hero-visual.svg" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://theplonkys.example.com" />
-  <meta property="og:image" content="assets/images/live-band.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#0b1224" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MusicGroup",
-    "name": "The Plonkys",
-    "description": "High-energy, eclectic live band from the Shetland Islands covering rap through classic rock and party anthems.",
-    "url": "https://theplonkys.example.com",
-    "sameAs": [
-      "https://facebook.com/theplonkys",
-      "https://instagram.com/theplonkys"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Shetland Islands",
-      "addressCountry": "Scotland"
-    },
-    "member": [
-      {"@type": "Person", "name": "Arron Peart", "jobTitle": "Drums"},
-      {"@type": "Person", "name": "David Sandison", "jobTitle": "Guitar/Vocals"},
-      {"@type": "Person", "name": "Taylor Pirie", "jobTitle": "Guitar"},
-      {"@type": "Person", "name": "Steven Anderson", "jobTitle": "Bass"}
-    ]
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "The Plonkys",
+      "genre": "Rock, Rap, Pop",
+      "url": "https://theplonkys.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Shetland Islands",
+        "addressCountry": "Scotland"
+      }
+    }
   </script>
 </head>
-  <body>
-    <!-- Streamlined masthead with simple navigation and theme toggle -->
-    <header class="site-header" id="top">
+<body>
+  <a class="skip-link" href="#hero">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="nav-shell">
+      <a class="brand" href="#hero" aria-label="The Plonkys home">
+        <span class="brand__mark"></span>
+        <div class="brand__text">
+          <span class="brand__eyebrow">Shetland Islands</span>
+          <span class="brand__name">The Plonkys</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
       <nav class="nav" aria-label="Primary">
-        <a class="logo" href="#top" aria-label="The Plonkys home">
-          <img class="logo__icon" src="assets/images/logo-bottle.png" alt="The Plonkys crest" />
-          <div class="logo__wordmark">
-            <span class="logo__eyebrow">Shetland Islands</span>
-            <strong>The Plonkys</strong>
-          </div>
-        </a>
-        <button class="theme-toggle" type="button" aria-label="Toggle theme">🌙</button>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">☰</button>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#socials">Social</a></li>
-          <li><a href="#gigs">Live</a></li>
+        <ul class="nav__list">
+          <li><a href="#music">Music</a></li>
+          <li><a href="#tour">Tour</a></li>
           <li><a href="#media">Media</a></li>
-          <li><a href="#listen">Listen</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#merch">Merch</a></li>
+          <li><a href="#press">Press</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-    </header>
-
-    <main>
-      <!-- Minimal hero focused on one hero image and clear calls-to-action -->
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="section__content hero__grid">
-          <div class="hero__content">
-            <p class="eyebrow">Shetland Islands, Scotland</p>
-            <h1 id="hero-title">High-energy covers, hometown originals.</h1>
-            <p class="tagline">
-              The Plonkys keep the room moving with rap, rock, and party anthems. Follow the socials to catch the next drop.
-            </p>
-            <div class="cta-group">
-              <a class="btn primary" href="#gigs">See gigs</a>
-              <a class="btn ghost" href="#contact">Book the band</a>
-            </div>
-            <div class="hero__meta">
-              <span class="chip">Rap</span>
-              <span class="chip">Rock</span>
-              <span class="chip">Party anthems</span>
-            </div>
-            <div class="hero__social">
-              <a class="pill" href="https://facebook.com/theplonkys" target="_blank" rel="noreferrer">Facebook</a>
-              <a class="pill" href="https://instagram.com/theplonkys" target="_blank" rel="noreferrer">Instagram</a>
-            </div>
-          </div>
-          <div class="hero__visual reveal">
-            <figure class="hero__shot">
-              <img src="assets/images/live-band.png" alt="The Plonkys raising bottles together on stage" loading="lazy" />
-              <figcaption>Live in Shetland — watch Facebook for the next announcement.</figcaption>
-            </figure>
-            <div class="hero__overlay-card">
-              <div>
-                <p class="eyebrow">Latest drop</p>
-                <p>“Is It Going Your Way?” and more teasers land on Instagram first.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    <!-- Band story and lineup -->
-    <section class="section about" id="about" aria-labelledby="about-title">
-      <div class="section__content">
-        <div class="section__header">
-          <h2 id="about-title">About</h2>
-          <p class="section__eyebrow">Shetland Folk Festival</p>
-        </div>
-        <div class="about__grid">
-          <div class="about__bio reveal">
-            <p>
-              The Plonkys are a high-energy, eclectic live band from the Shetland Islands, Scotland, known for jumping between rap, classic rock, and party anthems in the same set. Their shows are fast-paced, full of surprises, and built to keep dancefloors packed.
-            </p>
-            <p>
-              Fresh from a sold-out headline at Mareel in Lerwick, they keep momentum with a growing slate of originals, starting with their first release “Reading Between The Lines.”
-            </p>
-          </div>
-          <div class="about__panel reveal">
-            <h3>Bandmates</h3>
-            <ul class="bandmates">
-              <li><strong>Arron Peart</strong> — drums</li>
-              <li><strong>David Sandison</strong> — guitar &amp; vocals</li>
-              <li><strong>Taylor Pirie</strong> — guitar</li>
-              <li><strong>Steven Anderson</strong> — bass</li>
-            </ul>
-            <div class="chips" aria-label="Sounds like">
-              <span class="chip">Rap</span>
-              <span class="chip">Rock</span>
-              <span class="chip">Pop</span>
-              <span class="chip">Party Anthems</span>
-            </div>
-            <div class="highlight">
-              Sold-out headline show at Mareel (Lerwick) — tickets vanished fast for this major gig.
-            </div>
-          </div>
-        </div>
+      <div class="theme-switch" aria-label="Theme preference">
+        <button class="theme-btn" id="theme-toggle" type="button" aria-pressed="false">Light</button>
       </div>
-    </section>
+    </div>
+  </header>
 
-    <!-- Social cards keep the call-to-action simple -->
-    <section class="section socials" id="socials" aria-labelledby="socials-title">
-      <div class="section__content">
-        <div class="section__header">
-          <h2 id="socials-title">Social spotlight</h2>
-          <p class="section__eyebrow">Facebook • Instagram • Poster drops</p>
-        </div>
-        <div class="social-grid">
-          <article class="social-card reveal">
-            <div class="social-card__media">
-              <img src="assets/images/frontman-kneeling.png" alt="Frontman kneeling with a microphone mid-song" loading="lazy" />
-            </div>
-            <div class="social-card__body">
-              <p class="eyebrow">Facebook</p>
-              <h3>Gig drops and live photos</h3>
-              <p>Set reminders, RSVP to shows, and grab tickets from the feed.</p>
-              <a class="btn social" href="https://facebook.com/theplonkys" target="_blank" rel="noreferrer">facebook.com/theplonkys</a>
-            </div>
-          </article>
-          <article class="social-card reveal">
-            <div class="social-card__media">
-              <img src="assets/images/drummer-smile.png" alt="Drummer smiling behind a colorful kit" loading="lazy" />
-            </div>
-            <div class="social-card__body">
-              <p class="eyebrow">Instagram</p>
-              <h3>Reels and behind the scenes</h3>
-              <p>Swipe through stage moments, backstage snapshots, and quick clips.</p>
-              <a class="btn social" href="https://instagram.com/theplonkys" target="_blank" rel="noreferrer">instagram.com/theplonkys</a>
-            </div>
-          </article>
-          <article class="social-card reveal">
-            <div class="social-card__media">
-              <img src="assets/images/mareel-poster.png" alt="Holiday Mareel Auditorium poster for The Plonkys" loading="lazy" />
-            </div>
-            <div class="social-card__body">
-              <p class="eyebrow">Posters &amp; promo</p>
-              <h3>Shareables for your story</h3>
-              <p>Grab our latest posters and artwork to spread the word fast.</p>
-              <div class="promo-badges">
-                <span class="chip">Stories ready</span>
-                <span class="chip">Hi-res</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Live dates pulled from script.js for quick edits -->
-    <section class="section live" id="gigs" aria-labelledby="live-title">
-      <div class="section__content">
-        <div class="section__header">
-          <h2 id="live-title">Live / Gigs</h2>
-          <p class="section__eyebrow">Next shows</p>
-        </div>
-        <div class="filters" role="group" aria-label="Filter gigs">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="upcoming">Upcoming</button>
-          <button class="filter-btn" data-filter="past">Past</button>
-        </div>
-        <div id="gigs-list" class="gigs-list" aria-live="polite"></div>
-        <p class="update-note">Edit gigs in <code>script.js</code> under the <em>gigs</em> array.</p>
-      </div>
-    </section>
-
-    <!-- Lean media section without logo repetition -->
-    <section class="section media" id="media" aria-labelledby="media-title">
-      <div class="section__content">
-        <div class="section__header">
-          <h2 id="media-title">Media</h2>
-          <p class="section__eyebrow">Gallery &amp; Press</p>
-        </div>
-        <div class="gallery" aria-label="Photo gallery">
-          <figure class="gallery__item reveal"><img src="assets/images/live-band.png" loading="lazy" alt="The Plonkys raising bottles together on stage" /><figcaption>Live energy</figcaption></figure>
-          <figure class="gallery__item reveal"><img src="assets/images/frontman-kneeling.png" loading="lazy" alt="Singer kneeling with a microphone in hand" /><figcaption>Mic drop moments</figcaption></figure>
-          <figure class="gallery__item reveal"><img src="assets/images/drummer-smile.png" loading="lazy" alt="Smiling drummer playing under colorful lights" /><figcaption>Rhythm drive</figcaption></figure>
-          <figure class="gallery__item reveal"><img src="assets/images/acoustic-vocals.png" loading="lazy" alt="Guitarist singing with an acoustic guitar" /><figcaption>Acoustic break</figcaption></figure>
-          <figure class="gallery__item reveal"><img src="assets/images/mareel-poster.png" loading="lazy" alt="The Plonkys Mareel Auditorium holiday poster" /><figcaption>Mareel poster</figcaption></figure>
-          <figure class="gallery__item reveal"><img src="assets/images/is-it-going-your-way.png" loading="lazy" alt="Is It Going Your Way? cover art" /><figcaption>Cover art</figcaption></figure>
-        </div>
-        <div class="press-card reveal">
-          <h3>Press</h3>
-          <p>
-            The Plonkys headlined Mareel in Lerwick with a rapid sell-out, underscoring their hometown draw. Their first original, “Reading Between The Lines,” hints at more homegrown tunes to come.
+  <main>
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="grid hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow" id="hero-location">Shetland Islands, Scotland</p>
+          <h1 id="hero-title">Midnight energy. Arena-ready hooks.</h1>
+          <p class="lead" id="hero-description">
+            The Plonkys flip between rap cadences, rock riffs, and cinematic pop—all built for movement.
           </p>
-          <div class="press-card__art">
-            <div>
-              <p class="eyebrow">Follow the pages</p>
-              <p>Keep Facebook and Instagram in the loop for tour posters, merch drops, and release art like “Is It Going Your Way?”.</p>
-            </div>
+          <div class="hero__actions">
+            <a class="btn primary" href="#music">Listen</a>
+            <a class="btn ghost" href="#tour">Tour</a>
+            <a class="btn subtle" href="#merch">Merch</a>
+          </div>
+          <div class="hero__chips" id="hero-tags">
+            <span class="chip">Rap</span>
+            <span class="chip">Rock</span>
+            <span class="chip">Pop</span>
+          </div>
+          <div class="hero__social" id="hero-socials"></div>
+        </div>
+        <figure class="hero__visual" aria-hidden="true">
+          <img src="assets/images/hero-visual.svg" alt="Stage lights framing the band" />
+          <figcaption class="hero__caption">Live in color — new dates just added.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="music" aria-labelledby="music-title">
+      <div class="section__header">
+        <div>
+          <p class="eyebrow">Music</p>
+          <h2 id="music-title">Latest release + set staples</h2>
+          <p class="muted">Stream instantly or skim the tracklist before you hit the pit.</p>
+        </div>
+        <div class="inline-actions">
+          <a class="pill" href="#tour">See tour</a>
+          <a class="pill" href="#press">Press kit</a>
+        </div>
+      </div>
+      <div class="grid music__grid">
+        <article class="card release" id="release-card">
+          <div class="release__media">
+            <img id="release-cover" src="assets/images/gallery-2.svg" alt="Album art" loading="lazy" />
+            <a class="btn primary" id="release-cta" href="https://open.spotify.com/" target="_blank" rel="noreferrer">Play on Spotify</a>
+          </div>
+          <div class="release__details">
+            <p class="eyebrow">Latest drop</p>
+            <h3 id="release-title">Reading Between The Lines</h3>
+            <p class="muted" id="release-date">2025</p>
+            <ul class="tracklist" id="tracklist"></ul>
+          </div>
+        </article>
+        <div class="card embeds">
+          <div class="embed">
+            <p class="eyebrow">Spotify</p>
+            <iframe title="Spotify embed" src="https://open.spotify.com/embed/album/0sNOF9WDwhWunNAHPD3Baj" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="embed">
+            <p class="eyebrow">Apple Music</p>
+            <iframe title="Apple Music" allow="autoplay *; encrypted-media *; clipboard-write" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation" src="https://embed.music.apple.com/us/album/evermore-deluxe-version/1540314609" loading="lazy"></iframe>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section listen" id="listen" aria-labelledby="listen-title">
-      <div class="section__content">
-        <div class="section__header">
-          <h2 id="listen-title">Listen</h2>
-          <p class="section__eyebrow">Replace with official audio</p>
+    <section class="section" id="tour" aria-labelledby="tour-title">
+      <div class="section__header">
+        <div>
+          <p class="eyebrow">Tour</p>
+          <h2 id="tour-title">High-speed nights — grab tickets early</h2>
+          <p class="muted">Filter by region and lock your spot. We keep it intimate so rooms stay loud.</p>
         </div>
-        <div class="audio-grid reveal">
-          <div class="audio-card">
-            <h3>Reading Between The Lines</h3>
-            <audio controls preload="none">
-              <source src="audio/reading-between-the-lines.mp3" type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-            <p class="note">Replace with official audio.</p>
-          </div>
-          <div class="audio-card">
-            <h3>Live Sampler</h3>
-            <audio controls preload="none">
-              <source src="audio/live-sampler.mp3" type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-            <p class="note">Drop in your favorite live clip.</p>
-          </div>
+        <div class="filters" id="tour-filters" role="group" aria-label="Filter tour dates"></div>
+      </div>
+      <div class="tour-list" id="tour-list" aria-live="polite"></div>
+    </section>
+
+    <section class="section section--overlay" id="media" aria-labelledby="media-title">
+      <div class="section__header">
+        <div>
+          <p class="eyebrow">Media</p>
+          <h2 id="media-title">Visual log</h2>
+          <p class="muted">Stills, motion, and moments built for the feed. Tap to expand.</p>
+        </div>
+      </div>
+      <div class="media-grid" id="photo-grid">
+        <figure class="media-card"><img src="assets/images/gallery-1.svg" alt="Live show" loading="lazy" /><figcaption>Stage heat</figcaption></figure>
+        <figure class="media-card"><img src="assets/images/gallery-2.svg" alt="Cover art" loading="lazy" /><figcaption>Cover art</figcaption></figure>
+        <figure class="media-card"><img src="assets/images/gallery-3.svg" alt="Backstage" loading="lazy" /><figcaption>Backstage</figcaption></figure>
+        <figure class="media-card"><img src="assets/images/gallery-4.svg" alt="Crowd" loading="lazy" /><figcaption>Fireline</figcaption></figure>
+      </div>
+      <div class="video-embed">
+        <div class="embed">
+          <p class="eyebrow">Live cut</p>
+          <iframe title="YouTube" src="https://www.youtube.com/embed/ScMzIvxBSi4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
     </section>
 
-    <section class="section contact" id="contact" aria-labelledby="contact-title">
-      <div class="section__content">
-        <div class="section__header">
-          <h2 id="contact-title">Contact</h2>
-          <p class="section__eyebrow">Booking enquiries</p>
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="section__header">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">Built in Shetland, tuned for arenas</h2>
+          <p class="muted">The Plonkys move like a touring machine: sharp songwriting, zero dead air, and a culture-first crew.</p>
         </div>
-        <div class="contact__grid">
-          <form class="contact-form" novalidate>
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" required />
-              <span class="error" aria-live="polite"></span>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required />
-              <span class="error" aria-live="polite"></span>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-              <span class="error" aria-live="polite"></span>
-            </div>
-            <button class="btn primary" type="submit">Send</button>
-            <p class="form-success" role="status" aria-live="polite"></p>
-          </form>
-          <div class="contact__info">
-            <h3>Booking enquiries</h3>
-            <p>Email us directly or use the form.</p>
-            <div class="booking-email">
-              <a href="mailto:booking@theplonkys.com">booking@theplonkys.com</a>
-              <button class="btn ghost" type="button" id="copy-email">Copy email</button>
-            </div>
-            <!-- Update social links below -->
-            <div class="social-buttons" aria-label="Social links">
-              <a class="btn social" href="https://facebook.com/theplonkys" target="_blank" rel="noreferrer">Facebook</a>
-              <a class="btn social" href="https://instagram.com/theplonkys" target="_blank" rel="noreferrer">Instagram</a>
-            </div>
+      </div>
+      <div class="grid about__grid" id="about-grid">
+        <div class="card about__bio">
+          <p id="about-description">Arena-ready hooks, elastic genre-bending sets, and a hometown fanbase that sells out shows overnight.</p>
+          <div class="chips">
+            <span class="chip">Festival-ready</span>
+            <span class="chip">Originals + covers</span>
+            <span class="chip">All-night stamina</span>
           </div>
         </div>
+        <div class="card about__members" id="member-cards"></div>
+      </div>
+    </section>
+
+    <section class="section" id="merch" aria-labelledby="merch-title">
+      <div class="section__header">
+        <div>
+          <p class="eyebrow">Merch</p>
+          <h2 id="merch-title">Tour-grade merch with fast fulfilment</h2>
+          <p class="muted">Swap in real product shots anytime—grid is data-driven from <code>data/merch.json</code>.</p>
+        </div>
+      </div>
+      <div class="merch-grid" id="merch-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="section section--overlay" id="press" aria-labelledby="press-title">
+      <div class="section__header">
+        <div>
+          <p class="eyebrow">Press</p>
+          <h2 id="press-title">What the press is saying</h2>
+          <p class="muted">Pull quotes ready for your EPK. Swipe or arrow through.</p>
+        </div>
+      </div>
+      <div class="press-carousel" role="region" aria-label="Press quotes">
+        <div class="press-track" id="press-track"></div>
+        <div class="press-controls">
+          <button class="pill" id="press-prev" aria-label="Previous quote">◀</button>
+          <button class="pill" id="press-next" aria-label="Next quote">▶</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="newsletter" aria-labelledby="newsletter-title">
+      <div class="section__header">
+        <div>
+          <p class="eyebrow">Updates</p>
+          <h2 id="newsletter-title">Stay ahead of drops</h2>
+          <p class="muted">Tickets, merch, and releases straight to your inbox. Mailchimp-ready form action.</p>
+        </div>
+      </div>
+      <form class="newsletter" id="newsletter-form" novalidate>
+        <label class="sr-only" for="newsletter-email">Email</label>
+        <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" required />
+        <button class="btn primary" type="submit">Join list</button>
+        <p class="form-note" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="section section--overlay" id="contact" aria-labelledby="contact-title">
+      <div class="section__header">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Booking & direct</h2>
+          <p class="muted">Festival holds, private events, or media. We reply fast.</p>
+        </div>
+      </div>
+      <div class="grid contact__grid">
+        <div class="card contact__info">
+          <p class="eyebrow">Booking email</p>
+          <a id="booking-email" class="contact__email" href="mailto:booking@theplonkys.com">booking@theplonkys.com</a>
+          <div class="social-row" id="contact-socials"></div>
+          <div class="chips">
+            <span class="chip">Festivals</span>
+            <span class="chip">Support slots</span>
+            <span class="chip">College shows</span>
+          </div>
+        </div>
+        <form class="card contact__form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <button class="btn primary" type="submit">Send</button>
+          <p class="form-note" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer__brand">
-      <img class="footer__logo" src="assets/images/logo-bottle.png" alt="The Plonkys crest" />
+      <div class="brand__mark small"></div>
       <div>
-        <p class="eyebrow">World-famous party band</p>
-        <p class="footer__tagline">Official crest. Shetland-made. Arena-ready.</p>
+        <p class="brand__name">The Plonkys</p>
+        <p class="muted">Midnight energy from the Shetland Islands.</p>
       </div>
     </div>
-    <div class="footer__social">
-      <a class="pill" href="https://facebook.com/theplonkys" target="_blank" rel="noreferrer">Facebook</a>
-      <a class="pill" href="https://instagram.com/theplonkys" target="_blank" rel="noreferrer">Instagram</a>
+    <div class="footer__links">
+      <a href="#hero">Home</a>
+      <a href="#tour">Tour</a>
+      <a href="#merch">Merch</a>
+      <a href="#contact">Contact</a>
     </div>
-    <p class="footer__meta">© The Plonkys • Built in vanilla HTML/CSS/JS</p>
+    <div class="footer__social" id="footer-socials"></div>
   </footer>
 
-  <div class="toast" role="status" aria-live="polite"></div>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" aria-label="Close gallery">×</button>
+    <img id="lightbox-image" src="" alt="Expanded media" />
+    <p id="lightbox-caption"></p>
+  </div>
 
-  <script src="script.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
