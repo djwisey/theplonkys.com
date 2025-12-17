@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Neon Crest Hoodie",
+    "price": "£55",
+    "image": "assets/images/gallery-1.svg",
+    "url": "https://example.com/merch/hoodie"
+  },
+  {
+    "title": "Tour Poster Set",
+    "price": "£22",
+    "image": "assets/images/gallery-3.svg",
+    "url": "https://example.com/merch/poster"
+  },
+  {
+    "title": "Signal Beanie",
+    "price": "£18",
+    "image": "assets/images/gallery-4.svg",
+    "url": "https://example.com/merch/beanie"
+  },
+  {
+    "title": "Stadium Tee",
+    "price": "£28",
+    "image": "assets/images/gallery-2.svg",
+    "url": "https://example.com/merch/tee"
+  }
+]

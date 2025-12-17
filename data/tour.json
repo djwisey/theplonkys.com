@@ -1,0 +1,38 @@
+[
+  {
+    "date": "2025-05-28",
+    "city": "Lerwick",
+    "venue": "Mareel Auditorium",
+    "time": "20:00",
+    "region": "Scotland",
+    "ticketUrl": "https://example.com/tickets/lerwick",
+    "status": "Low tickets"
+  },
+  {
+    "date": "2025-06-10",
+    "city": "Aberdeen",
+    "venue": "Beach Ballroom",
+    "time": "19:30",
+    "region": "UK",
+    "ticketUrl": "https://example.com/tickets/aberdeen",
+    "status": "On sale"
+  },
+  {
+    "date": "2025-07-03",
+    "city": "Edinburgh",
+    "venue": "Liquid Room",
+    "time": "21:00",
+    "region": "UK",
+    "ticketUrl": "https://example.com/tickets/edinburgh",
+    "status": "New"
+  },
+  {
+    "date": "2025-08-15",
+    "city": "Reykjavík",
+    "venue": "Harpa Studio",
+    "time": "20:30",
+    "region": "EU",
+    "ticketUrl": "https://example.com/tickets/reykjavik",
+    "status": "Just announced"
+  }
+]

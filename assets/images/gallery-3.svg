@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0b1224"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#grad)"/>
+  <rect x="120" y="160" width="960" height="520" rx="36" fill="#1e293b" stroke="#334155" stroke-width="6"/>
+  <text x="170" y="260" fill="#e2e8f0" font-family="'Space Grotesk', 'Inter', system-ui" font-size="64" font-weight="700">The Plonkys live</text>
+  <text x="170" y="340" fill="#a5b4fc" font-family="'Space Grotesk', 'Inter', system-ui" font-size="32">Placeholder visual</text>
+  <circle cx="820" cy="460" r="140" fill="#d946ef" opacity="0.14"/>
+  <circle cx="420" cy="520" r="110" fill="#0ea5e9" opacity="0.12"/>
+</svg>

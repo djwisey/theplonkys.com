@@ -1,0 +1,51 @@
+{
+  "bandName": "The Plonkys",
+  "tagline": "Midnight energy from the Shetland Islands",
+  "description": "Arena-ready hooks, elastic genre-bending sets, and a hometown fanbase that sells out shows overnight.",
+  "location": "Shetland Islands, Scotland",
+  "heroCTA": {
+    "listen": "#music",
+    "tour": "#tour",
+    "merch": "#merch"
+  },
+  "latestRelease": {
+    "title": "Reading Between The Lines",
+    "date": "2025",
+    "cta": "https://open.spotify.com/",
+    "cover": "assets/images/gallery-2.svg",
+    "tracks": [
+      "Reading Between The Lines",
+      "Is It Going Your Way?",
+      "Midnight Ferry",
+      "Spark & Signal"
+    ]
+  },
+  "socials": {
+    "facebook": "https://facebook.com/theplonkys",
+    "instagram": "https://instagram.com/theplonkys",
+    "youtube": "https://youtube.com",
+    "tiktok": "https://tiktok.com/@theplonkys"
+  },
+  "bookingEmail": "booking@theplonkys.com",
+  "pressQuotes": [
+    {
+      "quote": "The Plonkys flipped the room from singalongs to mosh in minutes—bulletproof stagecraft.",
+      "source": "Shetland Live Review"
+    },
+    {
+      "quote": "A neon blur of rap, rock, and pop hooks. Every chorus lands like a freight train.",
+      "source": "North Sea Music"
+    },
+    {
+      "quote": "Proof a hometown band can sound like an arena tour. The Plonkys are in their champion era.",
+      "source": "Isles Culture"
+    }
+  ],
+  "members": [
+    {"name": "Arron Peart", "role": "Drums • Pulse architect"},
+    {"name": "David Sandison", "role": "Guitar & Vocals • Storyteller"},
+    {"name": "Taylor Pirie", "role": "Guitar • Lead texture"},
+    {"name": "Steven Anderson", "role": "Bass • Low-end thunder"}
+  ],
+  "newsletterAction": "https://example.com/newsletter"
+}
