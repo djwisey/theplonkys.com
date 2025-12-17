@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&display=swap');
 
+/* Theme tokens: adjust here to tweak brand colors sitewide */
 :root {
   --bg: #0b0c10;
   --surface: #11131a;
@@ -12,6 +13,7 @@
   color-scheme: dark;
 }
 
+/* Accessible light theme for daytime reading */
 [data-theme="light"] {
   --bg: #f8f9fb;
   --surface: #ffffff;
@@ -35,9 +37,9 @@ html {
 body {
   margin: 0;
   font-family: 'Space Grotesk', system-ui, -apple-system, "Segoe UI", sans-serif;
-  background: radial-gradient(circle at 15% 10%, rgba(255, 59, 111, 0.12), transparent 40%),
-    radial-gradient(circle at 80% 0%, rgba(56, 217, 169, 0.1), transparent 32%),
-    linear-gradient(145deg, #05060a 0%, #0c1018 40%, #0b0c10 100%);
+  background: radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--accent) 8%, transparent), transparent 40%),
+    radial-gradient(circle at 80% 0%, color-mix(in srgb, var(--accent-2) 10%, transparent), transparent 35%),
+    linear-gradient(180deg, color-mix(in srgb, var(--bg) 92%, transparent) 0%, var(--bg) 45%);
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
@@ -178,28 +180,30 @@ img {
   padding: clamp(2.75rem, 6vw, 4.75rem) clamp(1.25rem, 3vw, 3rem) 4rem;
   display: flex;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(255, 59, 111, 0.14), rgba(56, 217, 169, 0.14)),
-    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.05), transparent 40%),
-    radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.06), transparent 40%),
-    color-mix(in srgb, var(--surface) 80%, transparent);
+  background: color-mix(in srgb, var(--surface) 70%, var(--bg));
   border-bottom: 1px solid var(--border);
+}
+
+.section__content {
+  width: min(1100px, 100%);
+  margin: 0 auto;
 }
 
 .hero__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   gap: clamp(1.5rem, 3vw, 2.75rem);
-  align-items: start;
-  width: min(1100px, 100%);
+  align-items: center;
+  width: 100%;
 }
 
 .hero__content {
-  max-width: 720px;
+  max-width: 680px;
   text-align: left;
   display: grid;
   gap: 0.9rem;
-  padding: 1.35rem;
-  background: color-mix(in srgb, var(--surface) 70%, var(--bg));
+  padding: 1.5rem;
+  background: color-mix(in srgb, var(--surface) 85%, var(--bg));
   border: 1px solid var(--border);
   border-radius: 18px;
   box-shadow: var(--shadow);
@@ -228,7 +232,7 @@ h1 {
 }
 
 .tagline {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: var(--muted);
   margin-bottom: 1.1rem;
 }
@@ -257,30 +261,13 @@ h1 {
 
 .hero__visual {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.85rem;
   position: relative;
   max-width: 520px;
   justify-self: end;
   width: 100%;
 }
 
-.hero__badge {
-  display: flex;
-  gap: 0.65rem;
-  align-items: center;
-  background: color-mix(in srgb, var(--surface) 80%, var(--bg));
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 0.8rem 0.95rem;
-  box-shadow: var(--shadow);
-}
-
-.hero__badge img {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  object-fit: cover;
-}
 
 .hero__shot {
   margin: 0;
@@ -298,21 +285,13 @@ h1 {
 
 .hero__overlay-card {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.65rem;
+  gap: 0.45rem;
   align-items: center;
   background: color-mix(in srgb, var(--accent) 12%, var(--surface));
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 0.65rem 0.8rem;
+  padding: 0.85rem 1rem;
   box-shadow: var(--shadow);
-}
-
-.hero__overlay-card img {
-  width: 64px;
-  height: 64px;
-  border-radius: 12px;
-  object-fit: cover;
 }
 
 .btn {
@@ -357,47 +336,8 @@ h1 {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.hero__meta {
   justify-content: flex-start;
-}
-
-.hero__marquee {
-  overflow: hidden;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: color-mix(in srgb, var(--surface) 80%, var(--bg));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
-}
-
-.hero__marquee-track {
-  display: flex;
-  gap: 0.75rem;
-  padding: 0.6rem 0.75rem;
-  animation: marquee 18s linear infinite;
-  min-width: max-content;
-}
-
-.marquee-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.35rem 0.85rem;
-  border-radius: 999px;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 28%, var(--surface)), var(--surface));
-  border: 1px solid var(--border);
-  font-weight: 700;
-}
-
-.marquee-chip img {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--surface) 80%, var(--bg));
+  margin-top: 1rem;
 }
 
 .chip {
@@ -604,17 +544,9 @@ h1 {
 }
 
 .press-card__art {
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
+  display: grid;
+  gap: 0.35rem;
   margin-top: 0.75rem;
-}
-
-.press-card__art img {
-  width: 76px;
-  height: 76px;
-  border-radius: 12px;
-  object-fit: cover;
 }
 
 .audio-card audio,
@@ -734,15 +666,6 @@ h1 {
 .reveal.visible {
   opacity: 1;
   transform: none;
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
 }
 
 @media (max-width: 1024px) {
