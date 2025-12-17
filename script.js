@@ -1,3 +1,4 @@
+// Navigation and UI elements
 const navLinks = document.querySelectorAll('.nav-links a');
 const navToggle = document.querySelector('.nav-toggle');
 const navList = document.querySelector('.nav-links');
@@ -17,6 +18,7 @@ const gigs = [
 const gigContainer = document.getElementById('gigs-list');
 const filterButtons = document.querySelectorAll('.filter-btn');
 
+// Render gigs based on filter and keep DOM lean
 function renderGigs(filter = 'all') {
   if (!gigContainer) return;
   gigContainer.innerHTML = '';
@@ -57,6 +59,7 @@ filterButtons.forEach((btn) => {
   });
 });
 
+// Simple toast helper for clipboard feedback
 function showToast(message) {
   toast.textContent = message;
   toast.classList.add('show');
@@ -79,6 +82,7 @@ navToggle?.addEventListener('click', () => {
   navToggle.setAttribute('aria-expanded', String(isOpen));
 });
 
+// Observe sections to highlight active nav link
 function handleScrollSpy() {
   const sections = document.querySelectorAll('section[id]');
   const options = { rootMargin: '-50% 0px -40% 0px', threshold: 0 };
@@ -95,6 +99,7 @@ function handleScrollSpy() {
   sections.forEach((sec) => observer.observe(sec));
 }
 
+// Restore previously chosen theme
 function applyStoredTheme() {
   const saved = localStorage.getItem('plonkys-theme');
   if (saved) {
@@ -103,6 +108,7 @@ function applyStoredTheme() {
   }
 }
 
+// Toggle theme and persist preference
 function toggleTheme() {
   const current = document.documentElement.getAttribute('data-theme');
   const next = current === 'light' ? 'dark' : 'light';
@@ -113,6 +119,7 @@ function toggleTheme() {
 
 themeToggle?.addEventListener('click', toggleTheme);
 
+// Smooth scroll for in-page nav links
 function smoothNav() {
   navLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
@@ -124,6 +131,7 @@ function smoothNav() {
   });
 }
 
+// Lightweight client-side validation for the contact form
 function validateForm() {
   const form = document.querySelector('.contact-form');
   const success = form?.querySelector('.form-success');
@@ -159,6 +167,7 @@ function validateForm() {
   });
 }
 
+// Fade content in as it enters the viewport
 function observeReveals() {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReduced) {
