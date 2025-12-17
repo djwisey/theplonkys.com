@@ -4,7 +4,9 @@ const navList = document.querySelector('.nav-links');
 const themeToggle = document.querySelector('.theme-toggle');
 const toast = document.querySelector('.toast');
 const copyEmailBtn = document.getElementById('copy-email');
+const copyPhoneBtn = document.getElementById('copy-phone');
 const bookingEmail = 'booking@theplonkys.com';
+const bookingPhone = '+447800123456';
 
 // Update gig data here
 const gigs = [
@@ -74,6 +76,15 @@ copyEmailBtn?.addEventListener('click', async () => {
   }
 });
 
+copyPhoneBtn?.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(bookingPhone);
+    showToast('Phone number copied');
+  } catch (err) {
+    showToast('Press Ctrl/Cmd+C to copy');
+  }
+});
+
 navToggle?.addEventListener('click', () => {
   const isOpen = navList.classList.toggle('open');
   navToggle.setAttribute('aria-expanded', String(isOpen));
@@ -133,22 +144,52 @@ function validateForm() {
     let valid = true;
     const name = form.elements.namedItem('name');
     const email = form.elements.namedItem('email');
+    const phone = form.elements.namedItem('phone');
     const message = form.elements.namedItem('message');
 
     const validators = [
       { field: name, error: 'Name is required' },
       { field: email, error: 'Valid email is required', type: 'email' },
+      { field: phone, error: 'Add a valid phone number or leave blank', type: 'phone', optional: true },
       { field: message, error: 'Message is required' }
     ];
 
-    validators.forEach(({ field, error, type }) => {
-      const errorEl = field.parentElement.querySelector('.error');
-      if (!field.value.trim() || (type === 'email' && !field.value.includes('@'))) {
+  validators.forEach(({ field, error, type, optional }) => {
+    const errorEl = field.parentElement.querySelector('.error');
+    const value = field.value.trim();
+    if (!value && type !== 'phone' && !optional) {
+      errorEl.textContent = error;
+      valid = false;
+      return;
+      }
+
+      if (type === 'email' && (!value || !value.includes('@'))) {
         errorEl.textContent = error;
         valid = false;
-      } else {
-        errorEl.textContent = '';
+        return;
       }
+
+      if (type === 'phone' && value) {
+        const phonePattern = /^[+\d][\d\s().-]{6,}$/;
+        if (!phonePattern.test(value)) {
+          errorEl.textContent = error;
+          valid = false;
+          return;
+        }
+      }
+
+      if (!value && type === 'phone') {
+        errorEl.textContent = '';
+        return;
+      }
+
+      if (!value) {
+        errorEl.textContent = error;
+        valid = false;
+        return;
+      }
+
+      errorEl.textContent = '';
     });
 
     if (valid && success) {
