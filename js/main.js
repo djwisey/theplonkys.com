@@ -63,7 +63,13 @@ async function loadJSON(path) {
 function renderHero(config) {
   document.title = `${config.bandName} | Official Site`;
   document.getElementById('hero-location').textContent = config.location;
+  document.getElementById('hero-title').textContent = config.heroHeadline || config.tagline;
   document.getElementById('hero-description').textContent = config.description;
+  const heroActions = document.querySelectorAll('.hero__actions a');
+  const { listen, tour, merch } = config.heroCTA;
+  if (heroActions[0]) heroActions[0].href = listen;
+  if (heroActions[1]) heroActions[1].href = tour;
+  if (heroActions[2]) heroActions[2].href = merch;
   const socialContainer = document.getElementById('hero-socials');
   const contactSocials = document.getElementById('contact-socials');
   const footerSocials = document.getElementById('footer-socials');
@@ -114,6 +120,69 @@ function renderMembers(config) {
   document.getElementById('about-description').textContent = config.description;
   document.getElementById('booking-email').textContent = config.bookingEmail;
   document.getElementById('booking-email').href = `mailto:${config.bookingEmail}`;
+}
+
+function renderNotice(notice) {
+  const bar = document.getElementById('notice-bar');
+  if (!notice || !notice.message) {
+    bar.style.display = 'none';
+    return;
+  }
+
+  const span = document.createElement('span');
+  span.textContent = notice.message;
+  bar.appendChild(span);
+
+  if (notice.linkText && notice.linkUrl) {
+    const cta = document.createElement('a');
+    cta.href = notice.linkUrl;
+    cta.target = '_blank';
+    cta.rel = 'noreferrer';
+    cta.className = 'notice__cta';
+    cta.innerHTML = `${notice.linkText} →`;
+    bar.appendChild(cta);
+  }
+}
+
+function renderMomentum(momentum) {
+  if (!momentum) return;
+  const statGrid = document.getElementById('stat-grid');
+  const ctas = document.getElementById('momentum-ctas');
+  statGrid.innerHTML = '';
+  ctas.innerHTML = '';
+
+  momentum.metrics.forEach((metric) => {
+    const card = document.createElement('article');
+    card.className = 'stat-card reveal';
+    card.innerHTML = `<strong>${metric.value}</strong><p>${metric.label}</p><p class="muted">${metric.detail}</p>`;
+    statGrid.appendChild(card);
+  });
+
+  momentum.ctas.forEach((cta) => {
+    const pill = document.createElement('a');
+    pill.href = cta.href;
+    pill.className = 'pill';
+    pill.textContent = cta.label;
+    ctas.appendChild(pill);
+  });
+}
+
+function renderHighlights(highlights) {
+  if (!Array.isArray(highlights)) return;
+  const grid = document.getElementById('highlight-grid');
+  grid.innerHTML = '';
+
+  highlights.forEach((item) => {
+    const card = document.createElement('article');
+    card.className = 'highlight reveal';
+    card.innerHTML = `
+      <span class="pill">${item.eyebrow}</span>
+      <h3>${item.title}</h3>
+      <p>${item.copy}</p>
+      <a class="btn subtle highlight__cta" href="${item.ctaUrl}" target="_blank" rel="noreferrer">${item.ctaText}</a>
+    `;
+    grid.appendChild(card);
+  });
 }
 
 function formatDate(dateString) {
@@ -337,16 +406,25 @@ function init() {
   initLightbox();
 
   loadConfig().then((config) => {
+    renderNotice(config.notice);
     renderHero(config);
     renderRelease(config);
     renderMembers(config);
     renderPress(config.pressQuotes);
+    renderMomentum(config.momentum);
+    renderHighlights(config.highlights);
     initForms(config);
+    revealElements();
   });
 
-  loadJSON('data/tour.json').then(renderTour);
-  loadJSON('data/merch.json').then(renderMerch);
-  revealElements();
+  loadJSON('data/tour.json').then((tour) => {
+    renderTour(tour);
+    revealElements();
+  });
+  loadJSON('data/merch.json').then((items) => {
+    renderMerch(items);
+    revealElements();
+  });
 }
 
 document.addEventListener('DOMContentLoaded', init);

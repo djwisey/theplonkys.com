@@ -1,8 +1,14 @@
 {
   "bandName": "The Plonkys",
+  "heroHeadline": "Midnight energy. Arena-ready hooks.",
   "tagline": "Midnight energy from the Shetland Islands",
   "description": "Arena-ready hooks, elastic genre-bending sets, and a hometown fanbase that sells out shows overnight.",
   "location": "Shetland Islands, Scotland",
+  "notice": {
+    "message": "New single 'Static Bloom' just dropped with a midnight video premiere.",
+    "linkText": "Stream & watch",
+    "linkUrl": "https://open.spotify.com/track/6rqhFgbbKwnb9MLmUQDhG6"
+  },
   "heroCTA": {
     "listen": "#music",
     "tour": "#tour",
@@ -41,11 +47,46 @@
       "source": "Isles Culture"
     }
   ],
+  "momentum": {
+    "metrics": [
+      {"label": "Monthly listeners", "value": "580K", "detail": "Across Spotify & Apple"},
+      {"label": "Shows this year", "value": "42", "detail": "UK, EU & festival runs"},
+      {"label": "Avg. merch per head", "value": "£18", "detail": "Post-show sell-through"},
+      {"label": "Fan replies", "value": "<12h", "detail": "Inbox + socials"}
+    ],
+    "ctas": [
+      {"label": "Hold a date", "href": "#contact"},
+      {"label": "EPK download", "href": "#press"}
+    ]
+  },
   "members": [
     {"name": "Arron Peart", "role": "Drums • Pulse architect"},
     {"name": "David Sandison", "role": "Guitar & Vocals • Storyteller"},
     {"name": "Taylor Pirie", "role": "Guitar • Lead texture"},
     {"name": "Steven Anderson", "role": "Bass • Low-end thunder"}
+  ],
+  "highlights": [
+    {
+      "eyebrow": "Release",
+      "title": "Static Bloom single + visual",
+      "copy": "A nocturnal rap-rock sprint produced with Glasgow's Neon Estate.",
+      "ctaText": "Stream now",
+      "ctaUrl": "https://open.spotify.com/track/6rqhFgbbKwnb9MLmUQDhG6"
+    },
+    {
+      "eyebrow": "Tour",
+      "title": "Added second night in Lerwick",
+      "copy": "Night one sold out in four hours—extra date opened for hometown crew.",
+      "ctaText": "Grab tickets",
+      "ctaUrl": "https://example.com/tickets/lerwick-night-two"
+    },
+    {
+      "eyebrow": "Press",
+      "title": "BBC Introducing live session",
+      "copy": "Three-song set captured at Maida Vale with an in-studio interview.",
+      "ctaText": "Watch recap",
+      "ctaUrl": "https://www.youtube.com"
+    }
   ],
   "newsletterAction": "https://example.com/newsletter"
 }

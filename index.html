@@ -31,8 +31,8 @@
     }
   </script>
 </head>
-<body>
-  <a class="skip-link" href="#hero">Skip to content</a>
+  <body>
+    <a class="skip-link" href="#hero">Skip to content</a>
   <header class="site-header" id="top">
     <div class="nav-shell">
       <a class="brand" href="#hero" aria-label="The Plonkys home">
@@ -60,6 +60,7 @@
         <button class="theme-btn" id="theme-toggle" type="button" aria-pressed="false">Light</button>
       </div>
     </div>
+    <div class="notice" id="notice-bar" role="status" aria-live="polite"></div>
   </header>
 
   <main>
@@ -88,6 +89,18 @@
           <figcaption class="hero__caption">Live in color — new dates just added.</figcaption>
         </figure>
       </div>
+    </section>
+
+    <section class="section section--overlay" id="momentum" aria-labelledby="momentum-title">
+      <div class="section__header">
+        <div>
+          <p class="eyebrow">Momentum</p>
+          <h2 id="momentum-title">Proof the engines are running hot</h2>
+          <p class="muted">Numbers stay moving — streams, shows, and community growth in one glance.</p>
+        </div>
+        <div class="inline-actions" id="momentum-ctas"></div>
+      </div>
+      <div class="stat-grid" id="stat-grid" aria-live="polite"></div>
     </section>
 
     <section class="section" id="music" aria-labelledby="music-title">
@@ -181,6 +194,17 @@
         </div>
         <div class="card about__members" id="member-cards"></div>
       </div>
+    </section>
+
+    <section class="section" id="highlights" aria-labelledby="highlights-title">
+      <div class="section__header">
+        <div>
+          <p class="eyebrow">Highlights</p>
+          <h2 id="highlights-title">Signals from the road & studio</h2>
+          <p class="muted">Recent wins, collabs, and opportunities worth shouting about.</p>
+        </div>
+      </div>
+      <div class="highlight-grid" id="highlight-grid"></div>
     </section>
 
     <section class="section" id="merch" aria-labelledby="merch-title">
