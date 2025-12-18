@@ -1,8 +1,8 @@
 {
   "bandName": "The Plonkys",
-  "heroHeadline": "Midnight energy. Arena-ready hooks.",
-  "tagline": "Midnight energy from the Shetland Islands",
-  "description": "Arena-ready hooks, elastic genre-bending sets, and a hometown fanbase that sells out shows overnight.",
+  "heroHeadline": "Loud, direct, built for the pit.",
+  "tagline": "Shetland Islands rock/rap with clean lines and arena hooks.",
+  "description": "Straight-ahead arrangements, zero filler, and a crew that keeps the room moving.",
   "location": "Shetland Islands, Scotland",
   "notice": {
     "message": "New single 'Static Bloom' just dropped with a midnight video premiere.",
@@ -10,9 +10,9 @@
     "linkUrl": "https://open.spotify.com/track/6rqhFgbbKwnb9MLmUQDhG6"
   },
   "heroCTA": {
-    "listen": "#music",
-    "tour": "#tour",
-    "merch": "#merch"
+    "listen": "#listen",
+    "tour": "#shows",
+    "merch": "#contact"
   },
   "latestRelease": {
     "title": "Reading Between The Lines",
