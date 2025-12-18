@@ -187,6 +187,31 @@ h3 { font-size: clamp(1.2rem, 2.6vw, 1.6rem); }
   cursor: pointer;
 }
 
+.notice {
+  margin: 0.4rem clamp(1rem, 3vw, 2.5rem) 0.9rem;
+  padding: 0.7rem 0.95rem;
+  border-radius: 14px;
+  background: linear-gradient(120deg, color-mix(in srgb, var(--accent) 22%, transparent), color-mix(in srgb, var(--accent-2) 18%, transparent));
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.notice__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: #fff;
+  color: #0b1224;
+  font-weight: 700;
+}
+
 .hero {
   padding: clamp(2rem, 6vw, 4rem) clamp(1.1rem, 4vw, 3rem) clamp(3rem, 8vw, 5rem);
 }
@@ -339,6 +364,56 @@ h3 { font-size: clamp(1.2rem, 2.6vw, 1.6rem); }
 .filters button.active { background: color-mix(in srgb, var(--accent) 70%, transparent); color: #fff; }
 
 .section--overlay { background: linear-gradient(180deg, color-mix(in srgb, var(--surface) 50%, transparent), transparent); }
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.stat-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  padding: 1.1rem 1.25rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: color-mix(in srgb, var(--surface-2) 55%, transparent);
+  box-shadow: var(--shadow);
+}
+
+.stat-card strong { font-size: clamp(1.4rem, 4vw, 2rem); display: block; }
+.stat-card p { color: var(--muted); margin-bottom: 0; }
+
+.stat-card::after {
+  content: '';
+  position: absolute;
+  inset: auto -20% -45% 60%;
+  height: 120%;
+  background: radial-gradient(circle at center, color-mix(in srgb, var(--accent) 40%, transparent), transparent 60%);
+  transform: rotate(-8deg);
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.highlight {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  padding: 1.1rem 1.25rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: linear-gradient(160deg, color-mix(in srgb, var(--surface) 70%, transparent), color-mix(in srgb, var(--accent) 12%, transparent));
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 0.3rem;
+}
+
+.highlight .pill { width: fit-content; }
+.highlight p { color: #dbeafe; }
+.highlight__cta { justify-self: flex-start; }
 
 .media-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
 .media-card { position: relative; overflow: hidden; border-radius: var(--radius); cursor: zoom-in; border: 1px solid rgba(255,255,255,0.08); }
