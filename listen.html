@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Plonkys | Listen</title>
+  <meta name="description" content="Listen to The Plonkys and stream the latest tracks." />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page listen" data-page="listen">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell">
+      <div class="nav-shell">
+        <a class="brand" href="index.html" aria-label="The Plonkys home">
+          <span class="brand__mark"></span>
+          <span class="brand__name">The Plonkys</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav__list">
+            <li><a href="index.html">About</a></li>
+            <li><a href="gigs.html">Gigs</a></li>
+            <li><a href="listen.html">Listen</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="shell">
+    <section class="page-hero surface" aria-labelledby="listen-title">
+      <p class="badge">New music</p>
+      <h1 id="listen-title">Play The Plonkys</h1>
+      <p class="muted">Queue the latest drop and skim the tracklist.</p>
+    </section>
+
+    <section class="section grid-2">
+      <article class="card release panel panel--frosted">
+        <div class="release__media">
+          <img id="release-cover" src="assets/images/gallery-2.svg" alt="Album art" loading="lazy" />
+          <div class="pill-row">
+            <span class="pill muted">2025</span>
+          </div>
+        </div>
+        <div class="release__details">
+          <p class="eyebrow">Latest set</p>
+          <h3 id="release-title">Reading Between The Lines</h3>
+          <ul class="tracklist" id="listen-tracklist"></ul>
+        </div>
+      </article>
+      <div class="card embed panel panel--frosted">
+        <p class="eyebrow">On repeat</p>
+        <iframe title="Spotify embed" src="https://open.spotify.com/embed/album/0sNOF9WDwhWunNAHPD3Baj" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="cta-row">
+          <a class="btn" href="https://open.spotify.com/" target="_blank" rel="noreferrer">Spotify</a>
+          <a class="btn ghost" href="https://music.apple.com/" target="_blank" rel="noreferrer">Apple Music</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell surface">
+    <div class="footer__brand">
+      <div class="brand__mark small"></div>
+      <div>
+        <p class="brand__name">The Plonkys</p>
+        <p class="muted">Straight-ahead, high-energy rock from the Shetland Islands.</p>
+      </div>
+    </div>
+    <div class="footer__links">
+      <a href="index.html">About</a>
+      <a href="gigs.html">Gigs</a>
+      <a href="listen.html">Listen</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer__social" id="footer-socials"></div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,13 +1,37 @@
-const root = document.documentElement;
-
-async function loadJSON(path) {
-  const res = await fetch(path);
-  return res.json();
-}
+const siteData = {
+  bandName: 'The Plonkys',
+  location: 'Shetland Islands, Scotland',
+  tagline: 'Big hooks. No filler.',
+  description: 'Straight, heavy, and loud—built for rooms that like to move.',
+  bookingEmail: 'booking@theplonkys.com',
+  socials: {
+    facebook: 'https://www.facebook.com',
+    instagram: 'https://www.instagram.com',
+  },
+  members: [
+    { name: 'Mads M.', role: 'Vocals / Hype' },
+    { name: 'Alex K.', role: 'Guitar / Hooks' },
+    { name: 'Leo R.', role: 'Drums / Thunder' },
+    { name: 'Fin J.', role: 'Bass / Low end' },
+  ],
+  gigs: [
+    { date: '2025-07-12', city: 'Glasgow', venue: 'The Cathouse', region: 'Scotland', status: 'Tickets live', time: '8:00 PM', ticketUrl: '#' },
+    { date: '2025-07-26', city: 'Aberdeen', venue: 'Unit 51', region: 'Scotland', status: 'Low tickets', time: '9:00 PM', ticketUrl: '#' },
+    { date: '2025-08-14', city: 'Edinburgh', venue: 'Sneaky Pete’s', region: 'Scotland', status: 'On sale soon', time: '8:30 PM', ticketUrl: '#' },
+  ],
+  tracks: [
+    { title: 'Reading Between The Lines', length: '3:21' },
+    { title: 'Night Ferry', length: '2:55' },
+    { title: 'North Sea Static', length: '3:05' },
+    { title: 'Kinetic', length: '2:38' },
+  ],
+};
 
 function initNav() {
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.nav');
+  if (!toggle || !nav) return;
+
   toggle.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open);
@@ -21,88 +45,35 @@ function initNav() {
   });
 }
 
-function renderHero(config) {
-  document.title = `${config.bandName} | Official Site`;
-  document.getElementById('hero-location').textContent = config.location;
-  document.getElementById('hero-title').textContent = config.heroHeadline || config.tagline;
-  document.getElementById('hero-description').textContent = config.description;
-  document.getElementById('hero-listen').href = config.heroCTA.listen;
-  document.getElementById('hero-tour').href = config.heroCTA.tour;
-
-  const heroTags = document.getElementById('hero-tags');
-  heroTags.innerHTML = '';
-  ['Rap', 'Rock', 'Pop'].forEach((tag) => {
-    const pill = document.createElement('span');
-    pill.className = 'pill';
-    pill.textContent = tag;
-    heroTags.appendChild(pill);
-  });
+function createSocialButtons(container) {
+  if (!container) return;
+  container.innerHTML = '';
 
   const socials = [
-    { name: 'Facebook', url: config.socials.facebook },
-    { name: 'Instagram', url: config.socials.instagram },
-    { name: 'YouTube', url: config.socials.youtube },
-    { name: 'TikTok', url: config.socials.tiktok },
+    { name: 'Facebook', url: siteData.socials.facebook, icon: 'assets/icons/facebook.svg' },
+    { name: 'Instagram', url: siteData.socials.instagram, icon: 'assets/icons/instagram.svg' },
   ];
 
-  const heroSocials = document.getElementById('hero-socials');
-  const contactSocials = document.getElementById('contact-socials');
-  const footerSocials = document.getElementById('footer-socials');
-  [heroSocials, contactSocials, footerSocials].forEach((container) => (container.innerHTML = ''));
-
   socials.forEach((social) => {
-    if (!social.url) return;
-    const pill = document.createElement('a');
-    pill.href = social.url;
-    pill.target = '_blank';
-    pill.rel = 'noreferrer';
-    pill.className = 'pill';
-    pill.textContent = social.name;
-    heroSocials.appendChild(pill.cloneNode(true));
-    contactSocials.appendChild(pill.cloneNode(true));
-    footerSocials.appendChild(pill);
+    const btn = document.createElement('a');
+    btn.className = 'social-button';
+    btn.href = social.url;
+    btn.target = '_blank';
+    btn.rel = 'noreferrer';
+    btn.innerHTML = `<img src="${social.icon}" alt="${social.name} logo">${social.name}`;
+    container.appendChild(btn);
   });
 }
 
-function renderStory(config) {
-  document.getElementById('story-summary').textContent = config.tagline;
-  document.getElementById('about-description').textContent = config.description;
-  document.getElementById('booking-email').textContent = config.bookingEmail;
-  document.getElementById('booking-email').href = `mailto:${config.bookingEmail}`;
-
-  const statList = document.getElementById('stat-list');
-  statList.innerHTML = '';
-  if (config.momentum?.metrics) {
-    config.momentum.metrics.forEach((metric) => {
-      const li = document.createElement('li');
-      li.innerHTML = `<span>${metric.label}</span><strong>${metric.value}</strong>`;
-      statList.appendChild(li);
-    });
-  }
-
-  const memberGrid = document.getElementById('member-cards');
-  memberGrid.innerHTML = '';
-  config.members.forEach((member) => {
-    const chip = document.createElement('div');
-    chip.className = 'chip';
-    chip.textContent = `${member.name} — ${member.role}`;
-    memberGrid.appendChild(chip);
-  });
-}
-
-function renderRelease(config) {
-  const release = config.latestRelease;
-  document.getElementById('release-title').textContent = release.title;
-  document.getElementById('release-date').textContent = release.date;
-  document.getElementById('release-cover').src = release.cover;
-  document.getElementById('release-cta').href = release.cta;
-
-  const tracklist = document.getElementById('tracklist');
-  tracklist.innerHTML = '';
-  release.tracks.forEach((track, index) => {
-    const li = document.createElement('li');
-    li.textContent = `${index + 1}. ${track}`;
-    tracklist.appendChild(li);
+function renderMembers(containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  container.innerHTML = '';
+  siteData.members.forEach((member) => {
+    const card = document.createElement('article');
+    card.className = 'member-card';
+    card.innerHTML = `<strong>${member.name}</strong><p class="muted">${member.role}</p>`;
+    container.appendChild(card);
   });
 }
 
@@ -111,30 +82,88 @@ function formatDate(dateString) {
   return date.toLocaleDateString('en-GB', { month: 'short', day: 'numeric' });
 }
 
-function renderTour(tour) {
-  const list = document.getElementById('tour-list');
+function renderHome() {
+  if (document.body.dataset.page !== 'home') return;
+  document.title = `${siteData.bandName} | About`;
+
+  const heroTitle = document.getElementById('hero-title');
+  if (heroTitle) heroTitle.textContent = siteData.tagline;
+
+  const heroDesc = document.getElementById('hero-description');
+  if (heroDesc) heroDesc.textContent = siteData.description;
+
+  const heroLocation = document.getElementById('hero-location');
+  if (heroLocation) heroLocation.textContent = siteData.location;
+
+  renderMembers('member-grid');
+}
+
+function renderGigs() {
+  if (document.body.dataset.page !== 'gigs') return;
+  document.title = `${siteData.bandName} | Gigs`;
+  const list = document.getElementById('gigs-list');
+  if (!list) return;
   list.innerHTML = '';
-  tour.forEach((show) => {
+
+  siteData.gigs.forEach((gig) => {
     const card = document.createElement('article');
-    card.className = 'tour-card';
+    card.className = 'list-card';
     card.innerHTML = `
-      <div>
-        <time datetime="${show.date}">${formatDate(show.date)}</time>
-        <p class="muted">${show.time}</p>
+      <div class="list-card__header">
+        <div>
+          <p class="eyebrow">${formatDate(gig.date)}</p>
+          <h3>${gig.city}</h3>
+          <p class="muted">${gig.venue} • ${gig.time}</p>
+        </div>
+        <div class="list-card__meta">
+          <span class="chip">${gig.region}</span>
+          <span class="chip">${gig.status}</span>
+        </div>
       </div>
-      <div>
-        <h3>${show.city}</h3>
-        <p class="muted">${show.venue}</p>
-        <div class="chip-row"><span class="chip">${show.region}</span><span class="chip">${show.status}</span></div>
+      <div class="cta-row">
+        <a class="btn" href="${gig.ticketUrl}" target="_blank" rel="noreferrer">Tickets</a>
+        <a class="btn ghost" href="index.html">About the band</a>
       </div>
-      <a class="btn ghost" href="${show.ticketUrl}" target="_blank" rel="noreferrer">Tickets</a>
     `;
     list.appendChild(card);
   });
 }
 
+function renderListen() {
+  if (document.body.dataset.page !== 'listen') return;
+  document.title = `${siteData.bandName} | Listen`;
+  const tracklist = document.getElementById('listen-tracklist');
+  if (!tracklist) return;
+  tracklist.innerHTML = '';
+
+  siteData.tracks.forEach((track, index) => {
+    const li = document.createElement('li');
+    li.textContent = `${index + 1}. ${track.title} — ${track.length}`;
+    tracklist.appendChild(li);
+  });
+}
+
+function renderContact() {
+  if (document.body.dataset.page !== 'contact') return;
+  document.title = `${siteData.bandName} | Contact`;
+  const emailLink = document.getElementById('booking-email');
+  if (emailLink) {
+    emailLink.textContent = siteData.bookingEmail;
+    emailLink.href = `mailto:${siteData.bookingEmail}`;
+  }
+
+  createSocialButtons(document.getElementById('contact-socials'));
+  initForms();
+}
+
+function renderFooter() {
+  const footerSocials = document.getElementById('footer-socials');
+  createSocialButtons(footerSocials);
+}
+
 function initForms() {
   const contact = document.getElementById('contact-form');
+  if (!contact) return;
   const contactNote = contact.querySelector('.form-note');
   contact.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -165,17 +194,13 @@ function initForms() {
   });
 }
 
-async function init() {
+function init() {
   initNav();
-  initForms();
-
-  const config = await loadJSON('data/config.json');
-  renderHero(config);
-  renderStory(config);
-  renderRelease(config);
-
-  const tour = await loadJSON('data/tour.json');
-  renderTour(tour);
+  renderFooter();
+  renderHome();
+  renderGigs();
+  renderListen();
+  renderContact();
 }
 
 document.addEventListener('DOMContentLoaded', init);
