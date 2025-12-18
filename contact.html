@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Plonkys | Contact</title>
+  <meta name="description" content="Book The Plonkys or get in touch with the band." />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page contact" data-page="contact">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell">
+      <div class="nav-shell">
+        <a class="brand" href="index.html" aria-label="The Plonkys home">
+          <span class="brand__mark"></span>
+          <span class="brand__name">The Plonkys</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav__list">
+            <li><a href="index.html">About</a></li>
+            <li><a href="gigs.html">Gigs</a></li>
+            <li><a href="listen.html">Listen</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="shell">
+    <section class="page-hero surface" aria-labelledby="contact-title">
+      <p class="badge">Booking</p>
+      <h1 id="contact-title">Talk with the band</h1>
+      <p class="muted">Festivals, clubs, college nights—send the basics and we’ll reply quick.</p>
+    </section>
+
+    <section class="section contact-grid">
+      <div class="card contact__info panel panel--frosted">
+        <p class="eyebrow">Email</p>
+        <a id="booking-email" class="contact__email" href="mailto:booking@theplonkys.com">booking@theplonkys.com</a>
+        <p class="muted">Prefer socials? Hit the buttons below.</p>
+        <div class="social-buttons" id="contact-socials"></div>
+      </div>
+      <form class="card contact__form panel panel--frosted" id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+          <span class="error" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          <span class="error" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <span class="error" aria-live="polite"></span>
+        </div>
+        <button class="btn primary" type="submit">Send</button>
+        <p class="form-note" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer shell surface">
+    <div class="footer__brand">
+      <div class="brand__mark small"></div>
+      <div>
+        <p class="brand__name">The Plonkys</p>
+        <p class="muted">Straight-ahead, high-energy rock from the Shetland Islands.</p>
+      </div>
+    </div>
+    <div class="footer__links">
+      <a href="index.html">About</a>
+      <a href="gigs.html">Gigs</a>
+      <a href="listen.html">Listen</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer__social" id="footer-socials"></div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

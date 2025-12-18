@@ -3,47 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Plonkys | Official Site</title>
-  <meta name="description" content="Straight-ahead, high-energy rock and rap from the Shetland Islands." />
+  <title>The Plonkys | About</title>
+  <meta name="description" content="The official home of The Plonkys — rock and rap energy from the Shetland Islands." />
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
-  <a class="skip-link" href="#hero">Skip to content</a>
-  <header class="site-header" id="top">
-    <div class="nav-shell">
-      <a class="brand" href="#hero" aria-label="The Plonkys home">
-        <span class="brand__mark"></span>
-        <span class="brand__name">The Plonkys</span>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <ul class="nav__list">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#listen">Listen</a></li>
-          <li><a href="#shows">Shows</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+<body class="page home" data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell">
+      <div class="nav-shell">
+        <a class="brand" href="index.html" aria-label="The Plonkys home">
+          <span class="brand__mark"></span>
+          <span class="brand__name">The Plonkys</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav__list">
+            <li><a href="index.html">About</a></li>
+            <li><a href="gigs.html">Gigs</a></li>
+            <li><a href="listen.html">Listen</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero" id="hero" aria-labelledby="hero-title">
+  <main id="main" class="shell">
+    <section class="hero surface" id="hero" aria-labelledby="hero-title">
       <div class="hero__inner">
         <div class="hero__copy">
           <p class="eyebrow" id="hero-location">Shetland Islands, Scotland</p>
           <h1 id="hero-title">Big hooks. No filler.</h1>
           <p class="lead" id="hero-description">Straight, heavy, and loud—built for rooms that like to move.</p>
           <div class="hero__actions">
-            <a class="btn primary" id="hero-listen" href="#listen">Listen</a>
-            <a class="btn ghost" id="hero-tour" href="#shows">See shows</a>
+            <a class="btn primary" href="listen.html">Listen</a>
+            <a class="btn ghost" href="gigs.html">See gigs</a>
           </div>
-          <div class="pill-row" id="hero-tags"></div>
-          <div class="social-row" id="hero-socials"></div>
+          <div class="pill-row">
+            <span class="pill">Rock</span>
+            <span class="pill">Rap</span>
+            <span class="pill">Alt</span>
+          </div>
         </div>
         <figure class="hero__visual" aria-hidden="true">
           <img src="assets/images/hero-visual.svg" alt="Stage lights framing the band" />
@@ -51,127 +56,59 @@
       </div>
     </section>
 
-    <section class="section" id="story" aria-labelledby="story-title">
+    <section class="section surface panel panel--frosted" id="about" aria-labelledby="about-title">
       <div class="section__header">
         <div>
-          <p class="eyebrow">The story</p>
-          <h2 id="story-title">Modern rock with island grit</h2>
-          <p class="muted" id="story-summary">A lean touring unit mixing rap cadence, alt-rock guitars, and a crowd that likes to shout it back.</p>
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">Island grit, global volume</h2>
+          <p class="muted">The Plonkys fuse chant-along hooks with rap cadence, sprinting guitars, and a crowd that loves to yell it back.</p>
         </div>
       </div>
-      <div class="story-grid">
-        <div class="card">
-          <h3>Who we are</h3>
-          <p id="about-description">Arena-ready hooks, elastic genre-bending sets, and a hometown fanbase that sells out shows overnight.</p>
-          <div class="chip-row" id="member-tags">
-            <span class="chip">Festival-ready</span>
-            <span class="chip">Originals + covers</span>
-            <span class="chip">All-night stamina</span>
-          </div>
+      <div class="grid-2">
+        <div class="feature-block">
+          <h3>Live-first band</h3>
+          <p>We write for the room: high-energy sets that swing from heavy riffs to halftime drops without losing the groove.</p>
         </div>
-        <div class="card">
-          <h3>Stats that matter</h3>
-          <ul class="stat-list" id="stat-list"></ul>
-        </div>
-      </div>
-      <div class="member-grid" id="member-cards"></div>
-    </section>
-
-    <section class="section" id="listen" aria-labelledby="listen-title">
-      <div class="section__header">
-        <div>
-          <p class="eyebrow">Listen</p>
-          <h2 id="listen-title">Latest drop</h2>
-          <p class="muted">Queue it up or skim the tracklist first.</p>
-        </div>
-      </div>
-      <div class="listen-grid">
-        <article class="card release" id="release-card">
-          <div class="release__media">
-            <img id="release-cover" src="assets/images/gallery-2.svg" alt="Album art" loading="lazy" />
-            <div class="pill-row">
-              <a class="pill" id="release-cta" href="https://open.spotify.com/" target="_blank" rel="noreferrer">Play on Spotify</a>
-              <span class="pill muted" id="release-date">2025</span>
-            </div>
-          </div>
-          <div class="release__details">
-            <p class="eyebrow">New music</p>
-            <h3 id="release-title">Reading Between The Lines</h3>
-            <ul class="tracklist" id="tracklist"></ul>
-          </div>
-        </article>
-        <div class="card embed">
-          <p class="eyebrow">On repeat</p>
-          <iframe title="Spotify embed" src="https://open.spotify.com/embed/album/0sNOF9WDwhWunNAHPD3Baj" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="feature-block">
+          <h3>North Sea spirit</h3>
+          <p>Born on the Shetland Islands, we carry that stubborn cold-weather drive into every chorus and every tour stop.</p>
         </div>
       </div>
     </section>
 
-    <section class="section" id="shows" aria-labelledby="shows-title">
+    <section class="section" id="members" aria-labelledby="members-title">
       <div class="section__header">
         <div>
-          <p class="eyebrow">Shows</p>
-          <h2 id="shows-title">Nights on the books</h2>
-          <p class="muted">Lean rooms, loud crowds. Grab a date.</p>
+          <p class="eyebrow">About the members</p>
+          <h2 id="members-title">The crew on stage</h2>
+          <p class="muted">Four people, one loud machine.</p>
         </div>
       </div>
-      <div class="tour-list" id="tour-list" aria-live="polite"></div>
+      <div class="grid-3" id="member-grid"></div>
     </section>
 
-    <section class="section" id="gallery" aria-labelledby="gallery-title">
-      <div class="section__header">
-        <div>
-          <p class="eyebrow">Gallery</p>
-          <h2 id="gallery-title">A quick look</h2>
-          <p class="muted">Stills from the stage, the road, and the artwork stack.</p>
+    <section class="section">
+      <div class="grid-3">
+        <div class="feature-block">
+          <h3>Catch a show</h3>
+          <p>New dates around Scotland and the mainland are filling fast. Grab your spot in the pit.</p>
+          <a class="btn" href="gigs.html">See gigs</a>
         </div>
-      </div>
-      <div class="media-grid" id="photo-grid">
-        <figure class="media-card"><img src="assets/images/gallery-1.svg" alt="Live show" loading="lazy" /><figcaption>Stage heat</figcaption></figure>
-        <figure class="media-card"><img src="assets/images/gallery-2.svg" alt="Cover art" loading="lazy" /><figcaption>Cover art</figcaption></figure>
-        <figure class="media-card"><img src="assets/images/gallery-3.svg" alt="Backstage" loading="lazy" /><figcaption>Backstage</figcaption></figure>
-        <figure class="media-card"><img src="assets/images/gallery-4.svg" alt="Crowd" loading="lazy" /><figcaption>Fireline</figcaption></figure>
-      </div>
-    </section>
-
-    <section class="section" id="contact" aria-labelledby="contact-title">
-      <div class="section__header">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Booking & direct</h2>
-          <p class="muted">Festivals, clubs, college nights—talk to the band fast.</p>
+        <div class="feature-block">
+          <h3>Hear the new set</h3>
+          <p>Queue the latest tracks and hear what the live show sounds like on record.</p>
+          <a class="btn ghost" href="listen.html">Listen now</a>
         </div>
-      </div>
-      <div class="contact-grid">
-        <div class="card contact__info">
-          <p class="eyebrow">Email</p>
-          <a id="booking-email" class="contact__email" href="mailto:booking@theplonkys.com">booking@theplonkys.com</a>
-          <div class="social-row" id="contact-socials"></div>
+        <div class="feature-block">
+          <h3>Book the band</h3>
+          <p>Clubs, festivals, college nights—send the basics and we’ll get back fast.</p>
+          <a class="btn" href="contact.html">Contact</a>
         </div>
-        <form class="card contact__form" id="contact-form" novalidate>
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-            <span class="error" aria-live="polite"></span>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-            <span class="error" aria-live="polite"></span>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            <span class="error" aria-live="polite"></span>
-          </div>
-          <button class="btn primary" type="submit">Send</button>
-          <p class="form-note" role="status" aria-live="polite"></p>
-        </form>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer shell surface">
     <div class="footer__brand">
       <div class="brand__mark small"></div>
       <div>
@@ -180,10 +117,10 @@
       </div>
     </div>
     <div class="footer__links">
-      <a href="#hero">Home</a>
-      <a href="#listen">Listen</a>
-      <a href="#shows">Shows</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html">About</a>
+      <a href="gigs.html">Gigs</a>
+      <a href="listen.html">Listen</a>
+      <a href="contact.html">Contact</a>
     </div>
     <div class="footer__social" id="footer-socials"></div>
   </footer>
